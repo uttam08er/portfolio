@@ -1,0 +1,194 @@
+/* src/styles/Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--background-color);
+  z-index: 1000;
+}
+
+.navbar.scroll {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.nav-icon {
+  display: none;
+  color: var(--primary-color);
+  margin-bottom: -0.2rem;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  text-transform: uppercase;
+  /* font-weight: 200; */ 
+}
+
+.nav-links a {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  background: var(--primary-color);
+  transition: width 0.3s linear;
+  -webkit-transition: width 0.3s linear;
+  -moz-transition: width 0.3s linear;
+  -ms-transition: width 0.3s linear;
+  -o-transition: width 0.3s linear;
+}
+
+.nav-links a.active {
+  font-weight: 500;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: var(--primary-color);
+  }
+}
+
+.nav-links a:hover {
+  cursor: pointer;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  width: 30px;
+  height: 24px;
+}
+
+.hamburger {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: var(--black-color);
+  top: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.5s ease;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.5s ease;
+  -ms-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: var(--black-color);
+  transition: transform 0.3s ease;
+  transform: translateX(-50%);
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
+.hamburger.active {
+  background-color: transparent;
+}
+
+.hamburger.active::before {
+  /* background-color: var(--primary-color); */
+  transform: rotate(45deg) translate(-5px, 15px);
+  -webkit-transform: rotate(45deg) translate(-5px, 15px);
+  -moz-transform: rotate(45deg) translate(-5px, 15px);
+  -ms-transform: rotate(45deg) translate(-5px, 15px);
+  -o-transform: rotate(45deg) translate(-5px, 15px);
+}
+
+.hamburger.active::after {
+  /* background-color: var(--primary-color); */
+  transform: rotate(-45deg) translate(-4px, -16px);
+  -webkit-transform: rotate(-45deg) translate(-4px, -16px);
+  -moz-transform: rotate(-45deg) translate(-4px, -16px);
+  -ms-transform: rotate(-45deg) translate(-4px, -16px);
+  -o-transform: rotate(-45deg) translate(-4px, -16px);
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 66px;
+    right: -100%;
+    width: 200px;
+    height: calc(100vh - 72px);
+    flex-direction: column;
+    background-color: var(--background-color);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: right 0.5s ease;
+    -webkit-transition: right 0.5s ease;
+    -moz-transition: right 0.5s ease;
+    -ms-transition: right 0.5s ease;
+    -o-transition: right 0.5s ease;
+  }
+
+  .nav-links.active {
+    z-index: 998;
+    right: 0;
+  }
+}

@@ -1,0 +1,31 @@
+/* src/styles/Services.css */
+
+.service-cards.grid-three--cols{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    gap: 3rem;
+}
+
+@media (max-width: 992px) {
+    .about-content.grid-two--cols {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service-header {
+        text-align: center;
+    }
+}
+
+@media (max-width: 915px) {
+    .service-cards.grid-three--cols{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 590px) {    
+    .service-cards.grid-three--cols {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 3rem 0;
+    }
+}

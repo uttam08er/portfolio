@@ -1,0 +1,15 @@
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 120px;
+    aspect-ratio: 1;
+    position: relative;
+  }
+  
+  .circle-text {
+    font-size: 18px;
+    fill: var(--white-color);
+    font-weight: bold;
+  }
+  

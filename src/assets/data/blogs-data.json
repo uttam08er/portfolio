@@ -1,0 +1,54 @@
+[
+    {
+      "blogsId": "blog-01",
+      "showBlog": true,
+      "category": "Development",
+      "date": "6 Apr 2000",
+      "title": "Code your first React App",
+      "description": "A fully responsive e-commerce website with cart functionality and payment integration.",
+      "image": "/images/blogs/imageB1.jpg",
+      "technologies": ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
+      "liveUrl": "https://example.com/ecommerce",
+      "githubUrl": "https://github.com/yourusername/ecommerce",
+      "details": "This project was built to demonstrate my full-stack development skills..."
+    },
+    {
+      "blogsId": "blog-02",
+      "showBlog": true,
+      "category": "Development",
+      "date": "6 Apr 2000",
+      "title": "Code your first React App",
+      "description": "A fully responsive e-commerce website with cart functionality and payment integration.",
+      "image": "/images/blogs/imageB2.jpg",
+      "technologies": ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
+      "liveUrl": "https://example.com/ecommerce",
+      "githubUrl": "https://github.com/yourusername/ecommerce",
+      "details": "This project was built to demonstrate my full-stack development skills..."
+    },
+    {
+      "blogsId": "blog-03",
+      "showBlog": true,
+      "category": "Development",
+      "date": "6 Apr 2000",
+      "title": "Code your first React App",
+      "description": "A fully responsive e-commerce website with cart functionality and payment integration.",
+      "image": "/images/blogs/imageB3.jpg",
+      "technologies": ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
+      "liveUrl": "https://example.com/ecommerce",
+      "githubUrl": "https://github.com/yourusername/ecommerce",
+      "details": "This project was built to demonstrate my full-stack development skills..."
+    },
+    {
+      "blogsId": "blog-04",
+      "showBlog": false,
+      "category": "Development",
+      "date": "6 Apr 2000",
+      "title": "Code your first React App",
+      "description": "A fully responsive e-commerce website with cart functionality and payment integration.",
+      "image": "/images/blogs/imageB4.jpg",
+      "technologies": ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
+      "liveUrl": "https://example.com/ecommerce",
+      "githubUrl": "https://github.com/yourusername/ecommerce",
+      "details": "This project was built to demonstrate my full-stack development skills..."
+    }
+  ]

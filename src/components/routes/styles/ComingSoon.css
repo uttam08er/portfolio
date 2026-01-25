@@ -1,0 +1,27 @@
+.coming-soon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 0;
+}
+
+figure {
+    margin-top: 3rem;
+    max-width: 400px;
+}
+
+.coming-soon {
+    h2 {
+        color: var(--dark-gray);
+        font-size: 20px;
+        margin: 2rem 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .coming-soon h2 {
+        font-size: 14px;
+    }
+}

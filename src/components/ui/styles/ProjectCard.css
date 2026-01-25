@@ -1,0 +1,20 @@
+.project-card{
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.project-card{
+    & .card-style{
+        background-color: var(--light-gray);
+        background-size: cover;
+        width: 100%;
+        aspect-ratio: 1;
+    }
+}
+
+@media(max-width: 576px){
+    .project-card{
+        max-width: 300px;
+        aspect-ratio: 1;
+    }
+}

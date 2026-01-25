@@ -1,0 +1,92 @@
+/* scrollBehavior.css - Enhances scrolling behavior throughout the application */
+
+/* Optional: Add a scroll progress indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background-color: #007bff;
+    z-index: 1000;
+    width: 0%;
+    transition: width 0.2s ease-out;
+}
+
+/* Optional: Style for "scroll to top" button that could be used alongside the ScrollToTop component */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+    opacity: 0;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+}
+
+.scroll-to-top-icon {
+    font-size: 1.3rem;
+    animation: arrowUp 2s ease-in-out infinite;
+    -webkit-animation: arrowUp 2s ease-in-out infinite;
+}
+
+@keyframes arrowUp {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+        -webkit-transform: translateY(-6px);
+        -moz-transform: translateY(-6px);
+        -ms-transform: translateY(-6px);
+        -o-transform: translateY(-6px);
+}
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+.scroll-to-top-btn.visible {
+    opacity: 1;
+}
+
+.scroll-to-top-btn:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+/* For users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    .scroll-to-top-btn {
+      transition: none;
+    }
+  }
