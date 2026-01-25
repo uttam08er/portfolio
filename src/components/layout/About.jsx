@@ -16,42 +16,42 @@ const About = () => {
   ];
   return (
     <Element name="about" className='about-section'>
-      <div className="container block">
-        <div>
-        <div className="header">
-          <h1>About Me</h1>
-          <p>Learn more about my journey, skills, and what drives me as a developer.</p>
-        </div>
+      <div className="block">
+        <div className="container">
+          <div className="header">
+            <h1>About Me</h1>
+            <p>Learn more about my journey, skills, and what drives me as a developer.</p>
+          </div>
 
-        <section className="about">
-          <div className="about-content grid-two--cols">
-            <div className="about-text">
-              <h4>Hi, I'm Uttam</h4>
-              <p>I'm a front-end developer with a passion for creating beautiful,
-                functional, and user-friendly websites. I love building modern, responsive designs
-                that engage users and deliver results. Let’s create something amazing
-                together!
-              </p>
+          <section className="about">
+            <div className="about-content grid-two--cols">
+              <div className="about-text">
+                <h4>Hi, I'm Uttam</h4>
+                <p>I'm a front-end developer with a passion for creating beautiful,
+                  functional, and user-friendly websites. I love building modern, responsive designs
+                  that engage users and deliver results. Let’s create something amazing
+                  together!
+                </p>
 
-              <p>
-                I've worked with <span className='comp-name'>Manoj technologies Pvt. Ltd.</span> , helping them build responsive
-                websites and applications. My focus is on creating clean, efficient
-                code that provides an excellent user experience.
-              </p>
-              <div className="details grid-two--cols">
-                {/* <p><FaCalendar className='about-icon' /><span className='about-data'> </span>06/04/2000</p>
+                <p>
+                  I've worked with <span className='comp-name'>Manoj technologies Pvt. Ltd.</span> , helping them build responsive
+                  websites and applications. My focus is on creating clean, efficient
+                  code that provides an excellent user experience.
+                </p>
+                <div className="details grid-two--cols">
+                  {/* <p><FaCalendar className='about-icon' /><span className='about-data'> </span>06/04/2000</p>
                 <p><FaPhone className='about-icon' /><span className='about-data'> </span>+91 8540906167</p> */}
-                <p><FaEnvelope className='about-icon' /><span className='about-data'> </span>uttamkrp08@gmail.com</p>
-                <p><FaLocationDot className='about-icon' /><span className='about-data'> </span>Noida sector-51</p>
+                  <p><FaEnvelope className='about-icon' /><span className='about-data'> </span>uttamkrp08@gmail.com</p>
+                  <p><FaLocationDot className='about-icon' /><span className='about-data'> </span>Noida sector-51</p>
+                </div>
+              </div>
+              <div className="about-skills grid-three--cols">
+                {skills.map((element) => {
+                  return <CircleBar key={element.id} element={element} />
+                })}
               </div>
             </div>
-            <div className="about-skills grid-three--cols">
-              {skills.map((element) => {
-                return <CircleBar key={element.id} element={element} />
-              })}
-            </div>
-          </div>
-        </section>
+          </section>
         </div>
       </div>
     </Element>

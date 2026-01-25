@@ -14,8 +14,8 @@ const ProjectSection = () => {
 
   return (
     <Element name='projects'>
-      <div className="container block">
-        <div>
+      <div className="block">
+        <div className="container">
           <div className="header">
             <h1>MY PROJECTS</h1>
             <p>Feel free to visit my Projects page to explore a detailed showcase of my work, complete with live demos and source code (if applicable).</p>

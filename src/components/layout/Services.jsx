@@ -40,20 +40,20 @@ const Services = () => {
     ]
     return (
         <Element name='services'>
-            <div className="container block">
-                <div>
-                <div className="header">
-                    <h1>My Services</h1>
-                    <p>I offer some services to help businesses and individuals create stunning, high-performance websites and applications.</p>
-                </div>
-
-                <section className="services">
-                    <div className="service-cards grid-three--cols">
-                        {services.map((element) => {
-                            return <ServiceCard key={element.id} element={element} />
-                        })}
+            <div className="block">
+                <div className="container">
+                    <div className="header">
+                        <h1>My Services</h1>
+                        <p>I offer some services to help businesses and individuals create stunning, high-performance websites and applications.</p>
                     </div>
-                </section>
+
+                    <section className="services">
+                        <div className="service-cards grid-three--cols">
+                            {services.map((element) => {
+                                return <ServiceCard key={element.id} element={element} />
+                            })}
+                        </div>
+                    </section>
                 </div>
             </div>
         </Element>
