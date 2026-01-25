@@ -1,13 +1,16 @@
 {
   "name": "portfolio",
   "description": "A portfolio website to showcase my projects and skills.",
+  "homepage": "https://uttam08er.github.io/portfolio/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
