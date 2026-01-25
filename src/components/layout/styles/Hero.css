@@ -2,8 +2,8 @@
 .hero {
     display: flex;
     align-items: center;
-    /* min-height: 40rem; */
-    min-height: calc(90vh - 75px);
+    /* min-height: 40rem;  */
+    min-height: calc(90vh - 75px); 
 }
 
 .hero.grid-two--cols {

@@ -12,7 +12,7 @@ const NotAvailable = () => {
         <div className="not-available container">
             <figure>
                 <img
-                    src="/images/not-available.gif"
+                    src="/portfolio/images/not-available.gif"
                     alt='Not available...'
                 />
             </figure>

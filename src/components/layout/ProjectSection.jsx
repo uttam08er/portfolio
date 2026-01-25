@@ -9,22 +9,24 @@ const ProjectSection = () => {
   const navigate = useNavigate();
 
   const handleMoreClick = () => {
-    navigate('/projects');
+    navigate('/portfolio/projects');
   };
 
   return (
     <Element name='projects'>
-      <div className="container">
-        <div className="header">
-          <h1>MY PROJECTS</h1>
-          <p>Feel free to visit my Projects page to explore a detailed showcase of my work, complete with live demos and source code (if applicable).</p>
-        </div>
+      <div className="container block">
+        <div>
+          <div className="header">
+            <h1>MY PROJECTS</h1>
+            <p>Feel free to visit my Projects page to explore a detailed showcase of my work, complete with live demos and source code (if applicable).</p>
+          </div>
 
-        <section className="projects">
-          <AllProjectCard limit={4} />
-        </section>
-        <div className="more-items">
-          <Button onClick={handleMoreClick} variant="secondary">More Works</Button>
+          <section className="projects">
+            <AllProjectCard limit={4} />
+          </section>
+          <div className="more-items">
+            <Button onClick={handleMoreClick} variant="secondary">More Works</Button>
+          </div>
         </div>
       </div>
     </Element>

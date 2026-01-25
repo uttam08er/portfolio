@@ -40,7 +40,8 @@ const Services = () => {
     ]
     return (
         <Element name='services'>
-            <div className="container">
+            <div className="container block">
+                <div>
                 <div className="header">
                     <h1>My Services</h1>
                     <p>I offer some services to help businesses and individuals create stunning, high-performance websites and applications.</p>
@@ -53,6 +54,7 @@ const Services = () => {
                         })}
                     </div>
                 </section>
+                </div>
             </div>
         </Element>
     );

@@ -9,12 +9,13 @@ const MyBlogs = () => {
   const navigate = useNavigate();
 
   const handleMoreClick = () => {
-    navigate('/blogs');
+    navigate('/portfolio/blogs');
   };
 
   return (
     <Element name='blogs'>
-      <div className="container">
+      <div className="container block">
+        <div>
         <div className="header">
           <h1>MY BLOGS</h1>
           <p>Welcome to my blog! Here, I share my thoughts, insights, and experiences in the tech world.</p>
@@ -25,6 +26,7 @@ const MyBlogs = () => {
         </section>
         <div className="more-items">
           <Button onClick={handleMoreClick} variant="secondary">More Works</Button>
+        </div>
         </div>
       </div>
     </Element>

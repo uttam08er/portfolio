@@ -66,6 +66,14 @@ img {
   margin: 0 auto;
   padding: 3rem 2rem 3rem 2rem;
 }
+.block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 40rem; */
+  min-height: calc(100vh - 75px);
+}
+
 
 .header {
   text-align: center;

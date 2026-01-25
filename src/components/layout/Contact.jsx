@@ -16,7 +16,7 @@ const Contact = () => {
       </div>
       {/* </div> */}
     <Element name='contact'>
-        <div className="container contact">
+        <div className="container block contact">
           <ContactForm />
         </div>
     </Element>

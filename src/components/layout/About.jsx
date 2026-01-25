@@ -16,7 +16,8 @@ const About = () => {
   ];
   return (
     <Element name="about" className='about-section'>
-      <div className="container">
+      <div className="container block">
+        <div>
         <div className="header">
           <h1>About Me</h1>
           <p>Learn more about my journey, skills, and what drives me as a developer.</p>
@@ -51,6 +52,7 @@ const About = () => {
             </div>
           </div>
         </section>
+        </div>
       </div>
     </Element>
   );

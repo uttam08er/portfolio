@@ -24,7 +24,7 @@ const ProjectDetails = () => {
             {showData ? (
                 <>
                     <BackNav />
-                    <div className='project-details container'>
+                    <div className='project-details container block'>
                         <section className="grid-two--cols">
                             <img className='project-image' src={image} alt={title} />
                             <div className='details'>

@@ -144,7 +144,7 @@ Best regards,
       <div className="contact-form-container">
         <div className="contact-info">
           <div className="contact-image">
-            <img src="/images/contact.svg" alt="Contact" />
+            <img src="/portfolio/images/contact.svg" alt="Contact" />
           </div>
 
           <div className="contact-social">

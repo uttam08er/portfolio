@@ -23,39 +23,39 @@ const App = () => {
       errorElement: <NotFound />,
       children: [
         {
-          path: '/',
+          path: '/portfolio/',
           element: <Home />
         },
         {
-          path: '/about',
+          path: '/portfolio/about',
           element: <><BackNav /><About /></>
         },
         {
-          path: '/services',
+          path: '/portfolio/services',
           element: <><BackNav /><Services /></>
         },
         {
-          path: '/projects',
+          path: '/portfolio/projects',
           element: <Projects />
         },
         {
-          path: '/projects/:projectId',
+          path: '/portfolio/projects/:projectId',
           element: <ProjectDetails />,
           loader: ProjectDetailsLoader,
           errorElement: <NotFound />
         },
         {
-          path: '/blogs',
+          path: '/portfolio/blogs',
           element: <Blogs />
         },
         {
-          path: '/blogs/:blogsId',
+          path: '/portfolio/blogs/:blogsId',
           element: <BlogDetailsPage />,
           loader: BlogDetailsLoader,
           errorElement: <NotFound />
         },
         {
-          path: '/contact',
+          path: '/portfolio/contact',
           element: <><BackNav /><Contact /></>
         }
       ]

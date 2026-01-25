@@ -16,7 +16,7 @@ const NotFound = () => {
             <div className="not-found container">
                 <figure>
                     <img
-                        src= "/images/not-found-404.gif"
+                        src= "/portfolio/images/not-found-404.gif"
                         alt='404 page not found'
                     />
                 </figure>

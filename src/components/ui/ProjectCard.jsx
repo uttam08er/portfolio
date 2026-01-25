@@ -7,7 +7,7 @@ const ProjectCard = (props) => {
 
     return (
         <div className="project-card" >
-            <NavLink to={`/projects/${projectId}`}>
+            <NavLink to={`/portfolio/projects/${projectId}`}>
             <div className="card-style" style={{
                 backgroundImage: `url(${image})`
             }} />

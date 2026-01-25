@@ -12,7 +12,7 @@ const NotFound = () => {
         <div className="coming-soon container">
             <figure>
                 <img
-                    src="/images/coming-soon.gif"
+                    src="/portfolio/images/coming-soon.gif"
                     alt='Coming soon...'
                 />
             </figure>
