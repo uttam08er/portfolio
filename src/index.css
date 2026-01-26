@@ -64,10 +64,11 @@ img {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  min-height: 40rem;
   padding: 3rem 2rem 3rem 2rem;
 }
 
-.block{
+.block {
   display: flex;
   align-items: center;
   justify-content: center;
