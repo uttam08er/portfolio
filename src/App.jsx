@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import AppLayout from './components/routes/AppLayout';
 import './App.css';
 
@@ -16,7 +16,7 @@ import ProjectDetails, { ProjectDetailsLoader } from './components/projects/Proj
 import BlogDetailsPage, { BlogDetailsLoader } from './components/blogs/BlogDetailsPage';
 
 const App = () => {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: '/',
       element: <AppLayout />,
