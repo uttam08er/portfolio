@@ -8,7 +8,7 @@ const BlogsCard = (props) => {
     const { blogsId, publishedAt, image, title } = props.element;
     return (
         <div className="blogs-card">
-            <NavLink to={`/portfolio/blogs/${blogsId}`}>
+            <NavLink to={`/portfolio/blogs/${blogsId}`} aria-label={`View blog details for ${title}`}>
                 <div className="card-style" style={{
                     backgroundImage: `url(${image})`
                 }} />

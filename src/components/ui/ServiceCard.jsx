@@ -8,7 +8,7 @@ const ServiceCard = (props) => {
     <div className="service-card">
      <div style={{borderLeft: "solid 7px " + color }} className="card-body" >
         <div className="card-logo">{icon}</div>
-        <h3 style={{color: color}}>{title}</h3>
+        <p className='service-title' style={{color: color}}>{title}</p>
         <p>{description}</p>
      </div>
     </div>

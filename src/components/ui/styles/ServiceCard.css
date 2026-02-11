@@ -9,8 +9,10 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     
-    h3 {
-        margin-top: 1rem;
+    .service-title {
+        margin: 1rem 0;
+        font-weight: 600;
+        font-size: 1.2rem;
     }
 }
 
