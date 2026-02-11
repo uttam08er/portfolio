@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { FaPaperPlane, FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaRegEnvelope, FaWhatsapp } from "react-icons/fa6";
 import { useForm } from '@formspree/react';
 import Button from '../ui/Button';
-import './styles/ContactForm.css';
 import { toast } from './Toast';
+import './styles/ContactForm.css';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({

@@ -1,12 +1,5 @@
 /* src/styles/Contact.css */
 
-/* .contact-header {
-  text-align: center;
-  padding: 2rem;
-  background-color: var(--light-gray);
-  margin: 2rem 0;
-
-  & p{
-    color: var(--black-color);
-  }
-} */
+.contact{
+  padding-top: 3rem;
+}
