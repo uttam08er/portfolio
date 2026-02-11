@@ -9,17 +9,18 @@ import './styles/Contact.css';
 const Contact = () => {
   return (
     <>
-
-      <div className="contact-header">
-        <h1>Contact Me</h1>
-        <p>Have a question or want to work together? Feel free to reach out!</p>
-      </div>
-
-      <Element name='contact'>
-        <div className="container block contact">
-          <ContactForm />
+      <div className="container">
+        <div className="header">
+          <h1>Contact Me</h1>
+          <p>Feel free to reach out!</p>
         </div>
-      </Element>
+
+        <Element name='contact'>
+          <div className="container block contact">
+            <ContactForm />
+          </div>
+        </Element>
+      </div>
     </>
   );
 };

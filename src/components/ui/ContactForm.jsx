@@ -128,7 +128,6 @@ Best regards,
           </div>
 
           <div className="contact-social">
-            <h3>Connect with me</h3>
             <div className="social-icons">
               <a href={WhatsApp()} target="_blank" rel="noopener noreferrer" aria-label="whatsapp">
                 <FaWhatsapp className='social-icon' />
