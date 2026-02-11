@@ -1,9 +1,10 @@
 // src/components/ui/ContactForm.jsx
 import React, { useState } from 'react';
-import { FaPhone, FaEnvelope, FaLocationDot, FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaRegEnvelope } from "react-icons/fa6";
+import {FaPaperPlane, FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaRegEnvelope } from "react-icons/fa6";
 import { useForm } from '@formspree/react';
 import Button from '../ui/Button';
 import './styles/ContactForm.css';
+import { toast } from './Toast';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -63,18 +64,13 @@ const ContactForm = () => {
       try {
         // Here you would normally send the form data to a server
         // Using a timeout to simulate an API call
-        const result = await formspreeSubmit(e); // submit to Formspree
+        const result = await formspreeSbmit(e); // submit to Formspree
         console.log("Form submitted...");
 
         await new Promise(resolve => setTimeout(resolve, 1000));
-
         // Success
-        setSubmitStatus({
-          type: 'success',
-          // type: 'error',
-          message: 'Your message has been sent. I\'ll get back to you soon!'
-        });
-
+        toast.success("Your message has been sent. I\'ll get back to you soon!");
+        
         // Reset form
         setFormData({
           name: '',
@@ -82,23 +78,10 @@ const ContactForm = () => {
           subject: '',
           message: ''
         });
-
-        // Clear success message after 5 seconds
-        setTimeout(() => {
-          setSubmitStatus(null);
-        }, 5000);
-
+        
       } catch (error) {
         // Error
-        setSubmitStatus({
-          type: 'error',
-          message: 'There was an error sending your message. Please try again.'
-        });
-
-        // Clear error message after 5 seconds
-        setTimeout(() => {
-          setSubmitStatus(null);
-        }, 5000);
+        toast.error('There was an error sending your message. Please try again!');
       }
 
       setIsSubmitting(false);
@@ -130,17 +113,6 @@ Best regards,
 
   return (
     <div className=" contact-form-section">
-
-      <div className="toast">
-        <div className="toast-container">
-          {submitStatus && (
-            <div className={`form-status ${submitStatus.type}`}>
-              {submitStatus.message}
-            </div>
-          )}
-        </div>
-      </div>
-
       <div className="contact-form-container">
         <div className="contact-info">
           <div className="contact-image">
@@ -234,6 +206,7 @@ Best regards,
               variant="primary"
               disabled={isSubmitting}
             >
+              {/* {isSubmitting ? 'Sending...' : <FaPaperPlane className='btn-icon' />} */}
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
           </form>

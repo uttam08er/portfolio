@@ -1,54 +1,278 @@
 [
-    {
-      "blogsId": "blog-01",
-      "showBlog": true,
-      "category": "Development",
-      "date": "6 Apr 2000",
-      "title": "Code your first React App",
-      "description": "A fully responsive e-commerce website with cart functionality and payment integration.",
-      "image": "/portfolio/images/blogs/imageB1.jpg",
-      "technologies": ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
-      "liveUrl": "https://example.com/ecommerce",
-      "githubUrl": "https://github.com/yourusername/ecommerce",
-      "details": "This project was built to demonstrate my full-stack development skills..."
+  {
+    "blogsId": "blog-01",
+    "showBlog": true,
+    "title": "Building Scalable React Applications: Best Practices and Architecture Patterns your team and requirements",
+    "excerpt": "Learn how to structure and architect React applications that can grow with your team and requirements.",
+    "category": "Development",
+    "publishedAt": "2026-01-15",
+    "readTime": "8 min read",
+    "image": "/portfolio/images/blogs/imageB1.webp",
+    "featuredImage": "linear-gradient(to right,#64b7d4,#24a5ee)",
+    "likeCount": 1,
+    "author": {
+      "name": "Uttam Kumar",
+      "bio": "Full-stack developer in React and Node.js."
     },
-    {
-      "blogsId": "blog-02",
-      "showBlog": true,
-      "category": "Development",
-      "date": "6 Apr 2000",
-      "title": "Code your first React App",
-      "description": "A fully responsive e-commerce website with cart functionality and payment integration.",
-      "image": "/portfolio/images/blogs/imageB2.jpg",
-      "technologies": ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
-      "liveUrl": "https://example.com/ecommerce",
-      "githubUrl": "https://github.com/yourusername/ecommerce",
-      "details": "This project was built to demonstrate my full-stack development skills..."
+    "toc": [
+      {
+        "id": "component-architecture",
+        "title": "Component Architecture"
+      },
+      {
+        "id": "state-management",
+        "title": "State Management"
+      },
+      {
+        "id": "performance-optimization",
+        "title": "Performance Optimization"
+      },
+      {
+        "id": "testing-strategy",
+        "title": "Testing Strategy"
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion"
+      }
+    ],
+    "tags": [
+      "React",
+      "JavaScript",
+      "Web Development",
+      "Architecture",
+      "Best Practices"
+    ],
+    "content": [
+      "<p>Building scalable React applications is crucial for long-term project success. In this comprehensive guide, we'll explore the essential patterns and practices that will help you create maintainable, performant applications.</p>",
+      "<h2 id='component-architecture'>Component Architecture</h2>",
+      "<p>The foundation of any scalable React application lies in its component architecture. By following the principle of separation of concerns and creating reusable components, we can build applications that are both maintainable and extensible.</p>",
+      "<h3>Container vs Presentational Components</h3>",
+      "<p>One of the most important patterns is separating your components into containers (smart components) and presentational components (dumb components). Container components handle logic and state management, while presentational components focus purely on rendering UI.</p>",
+      "<h3>Container vs Presentational Components</h3>",
+      "<div class='code-block'> <pre><code>const UserListContainer = () => { \n\tconst [users, setUsers ] = useState([]); \nconst [loading, setLoading ] = useState(true); \nuseEffect(() => { fetchUsers().then(data => { setUsers(data); \nsetLoading(false); }); }, []); return &lt;UserList users={users } loading={loading } /&gt;; }; // Presentational Component const UserList = ({ users, loading }) => { if (loading) return &lt;div&gt;Loading...&lt;/div&gt;; return ( &lt;div&gt; {users.map(user => ( &lt;UserCard key={user.id } user={user } /&gt; )) } &lt;/div&gt; ); };</code></pre> </div>",
+      "<h2 id='state-management'>State Management</h2>",
+      "<p>As your application grows, managing state becomes increasingly complex. Consider using state management libraries like Redux, Zustand, or Context API for global state management.</p>",
+      "<h3>When to Use Local vs Global State</h3>",
+      "<p>Not all state needs to be global. Use local state for component-specific data and global state for data that needs to be shared across multiple components.</p>",
+      "<blockquote class='quote'> \"The key to successful state management is knowing when to lift state up and when to keep it local.\" - React Team </blockquote>",
+      "<h2 id='performance-optimization'>Performance Optimization</h2>",
+      "<p>Performance is crucial for user experience. Here are some key optimization techniques:</p>",
+      "<ul class='list'><li>Use React.memo for component memoization</li><li>Implement code splitting with React.lazy</li><li>Optimize bundle size with tree shaking</li><li>Use proper key props in lists</li><li>Implement virtual scrolling for large lists</li></ul>",
+      "<h2 id='testing-strategy'>Testing Strategy</h2>",
+      "<p>A comprehensive testing strategy includes unit tests, integration tests, and end-to-end tests. Use tools like Jest, React Testing Library, and Cypress to ensure your application works as expected.</p>",
+      "<h3>Testing Best Practices</h3>",
+      "<p>Focus on testing behavior rather than implementation details. Write tests that give you confidence in your application's functionality.</p>",
+      "<h2 id='conclusion'>Conclusion</h2>",
+      "<p>Building scalable React applications requires careful planning and adherence to best practices. By following these patterns and continuously refactoring your code, you can create applications that stand the test of time.</p><br>",
+      "<p>Remember, scalability isn't just about handling more users—it's about creating code that can evolve with your requirements and team.</p>"
+    ]
+  },
+  {
+    "blogsId": "blog-02",
+    "showBlog": false,
+    "title": "How to Deploy Your React Application on GitHub Pages (with Routing Fix)",
+    "excerpt": "Deploying a React application to GitHub Pages is a fantastic way to host your projects for free.",
+    "category": "Development",
+    "publishedAt": "2026-02-1",
+    "readTime": "12 min read",
+    "image": "/portfolio/images/blogs/imageB2.webp",
+    "featuredImage": "linear-gradient(to right,#ff547f,#fb4845)",
+    "likeCount": 1,
+    "author": {
+      "name": "Uttam Kumar",
+      "bio": "Full-stack developer in React and Node.js."
     },
-    {
-      "blogsId": "blog-03",
-      "showBlog": true,
-      "category": "Development",
-      "date": "6 Apr 2000",
-      "title": "Code your first React App",
-      "description": "A fully responsive e-commerce website with cart functionality and payment integration.",
-      "image": "/portfolio/images/blogs/imageB3.jpg",
-      "technologies": ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
-      "liveUrl": "https://example.com/ecommerce",
-      "githubUrl": "https://github.com/yourusername/ecommerce",
-      "details": "This project was built to demonstrate my full-stack development skills..."
+    "toc": [
+      {
+        "id": "component-architecture",
+        "title": "Component Architecture"
+      },
+      {
+        "id": "state-management",
+        "title": "State Management"
+      },
+      {
+        "id": "performance-optimization",
+        "title": "Performance Optimization"
+      },
+      {
+        "id": "testing-strategy",
+        "title": "Testing Strategy"
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion"
+      }
+    ],
+    "tags": [
+      "React",
+      "JavaScript",
+      "Web Development",
+      "Architecture",
+      "Best Practices"
+    ],
+    "content": [
+      "<p>Building scalable React applications is crucial for long-term project success. In this comprehensive guide, we'll explore the essential patterns and practices that will help you create maintainable, performant applications.</p>",
+      "<h2 id='component-architecture'>Component Architecture</h2>",
+      "<p>The foundation of any scalable React application lies in its component architecture. By following the principle of separation of concerns and creating reusable components, we can build applications that are both maintainable and extensible.</p>",
+      "<h3>Container vs Presentational Components</h3>",
+      "<p>One of the most important patterns is separating your components into containers (smart components) and presentational components (dumb components). Container components handle logic and state management, while presentational components focus purely on rendering UI.</p>",
+      "<h3>Container vs Presentational Components</h3>",
+      "<div class='code-block'> <pre><code>const UserListContainer = () => { \n\tconst [users, setUsers ] = useState([]); \nconst [loading, setLoading ] = useState(true); \nuseEffect(() => { fetchUsers().then(data => { setUsers(data); \nsetLoading(false); }); }, []); return &lt;UserList users={users } loading={loading } /&gt;; }; // Presentational Component const UserList = ({ users, loading }) => { if (loading) return &lt;div&gt;Loading...&lt;/div&gt;; return ( &lt;div&gt; {users.map(user => ( &lt;UserCard key={user.id } user={user } /&gt; )) } &lt;/div&gt; ); };</code></pre> </div>",
+      "<h2 id='state-management'>State Management</h2>",
+      "<p>As your application grows, managing state becomes increasingly complex. Consider using state management libraries like Redux, Zustand, or Context API for global state management.</p>",
+      "<h3>When to Use Local vs Global State</h3>",
+      "<p>Not all state needs to be global. Use local state for component-specific data and global state for data that needs to be shared across multiple components.</p>",
+      "<blockquote class='quote'> \"The key to successful state management is knowing when to lift state up and when to keep it local.\" - React Team </blockquote>",
+      "<h2 id='performance-optimization'>Performance Optimization</h2>",
+      "<p>Performance is crucial for user experience. Here are some key optimization techniques:</p>",
+      "<ul class='list'><li>Use React.memo for component memoization</li><li>Implement code splitting with React.lazy</li><li>Optimize bundle size with tree shaking</li><li>Use proper key props in lists</li><li>Implement virtual scrolling for large lists</li></ul>",
+      "<h2 id='testing-strategy'>Testing Strategy</h2>",
+      "<p>A comprehensive testing strategy includes unit tests, integration tests, and end-to-end tests. Use tools like Jest, React Testing Library, and Cypress to ensure your application works as expected.</p>",
+      "<h3>Testing Best Practices</h3>",
+      "<p>Focus on testing behavior rather than implementation details. Write tests that give you confidence in your application's functionality.</p>",
+      "<h2 id='conclusion'>Conclusion</h2>",
+      "<p>Building scalable React applications requires careful planning and adherence to best practices. By following these patterns and continuously refactoring your code, you can create applications that stand the test of time.</p><br>",
+      "<p>Remember, scalability isn't just about handling more users—it's about creating code that can evolve with your requirements and team.</p>"
+    ]
+  },
+  {
+    "blogsId": "blog-03",
+    "showBlog": false,
+    "title": "Building Scalable React Applications: Best ",
+    "excerpt": "Learn how to structure and architect React applications that can grow with your team and requirements.",
+    "category": "Development",
+    "publishedAt": "2026-02-10",
+    "readTime": "8 min read",
+    "image": "/portfolio/images/blogs/imageB3.webp",
+    "featuredImage": "linear-gradient(to right,#64b7d4,#24a5ee)",
+    "likeCount": 1,
+    "author": {
+      "name": "Uttam Kumar",
+      "bio": "Full-stack developer in React and Node.js."
     },
-    {
-      "blogsId": "blog-04",
-      "showBlog": false,
-      "category": "Development",
-      "date": "6 Apr 2000",
-      "title": "Code your first React App",
-      "description": "A fully responsive e-commerce website with cart functionality and payment integration.",
-      "image": "/portfolio/images/blogs/imageB4.jpg",
-      "technologies": ["React", "Redux", "Node.js", "MongoDB", "Stripe"],
-      "liveUrl": "https://example.com/ecommerce",
-      "githubUrl": "https://github.com/yourusername/ecommerce",
-      "details": "This project was built to demonstrate my full-stack development skills..."
-    }
-  ]
+    "toc": [
+      {
+        "id": "component-architecture",
+        "title": "Component Architecture"
+      },
+      {
+        "id": "state-management",
+        "title": "State Management"
+      },
+      {
+        "id": "performance-optimization",
+        "title": "Performance Optimization"
+      },
+      {
+        "id": "testing-strategy",
+        "title": "Testing Strategy"
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion"
+      }
+    ],
+    "tags": [
+      "React",
+      "JavaScript",
+      "Web Development",
+      "Architecture",
+      "Best Practices"
+    ],
+    "content": [
+      "<p>Building scalable React applications is crucial for long-term project success. In this comprehensive guide, we'll explore the essential patterns and practices that will help you create maintainable, performant applications.</p>",
+      "<h2 id='component-architecture'>Component Architecture</h2>",
+      "<p>The foundation of any scalable React application lies in its component architecture. By following the principle of separation of concerns and creating reusable components, we can build applications that are both maintainable and extensible.</p>",
+      "<h3>Container vs Presentational Components</h3>",
+      "<p>One of the most important patterns is separating your components into containers (smart components) and presentational components (dumb components). Container components handle logic and state management, while presentational components focus purely on rendering UI.</p>",
+      "<h3>Container vs Presentational Components</h3>",
+      "<div class='code-block'> <pre><code>const UserListContainer = () => { \n\tconst [users, setUsers ] = useState([]); \nconst [loading, setLoading ] = useState(true); \nuseEffect(() => { fetchUsers().then(data => { setUsers(data); \nsetLoading(false); }); }, []); return &lt;UserList users={users } loading={loading } /&gt;; }; // Presentational Component const UserList = ({ users, loading }) => { if (loading) return &lt;div&gt;Loading...&lt;/div&gt;; return ( &lt;div&gt; {users.map(user => ( &lt;UserCard key={user.id } user={user } /&gt; )) } &lt;/div&gt; ); };</code></pre> </div>",
+      "<h2 id='state-management'>State Management</h2>",
+      "<p>As your application grows, managing state becomes increasingly complex. Consider using state management libraries like Redux, Zustand, or Context API for global state management.</p>",
+      "<h3>When to Use Local vs Global State</h3>",
+      "<p>Not all state needs to be global. Use local state for component-specific data and global state for data that needs to be shared across multiple components.</p>",
+      "<blockquote class='quote'> \"The key to successful state management is knowing when to lift state up and when to keep it local.\" - React Team </blockquote>",
+      "<h2 id='performance-optimization'>Performance Optimization</h2>",
+      "<p>Performance is crucial for user experience. Here are some key optimization techniques:</p>",
+      "<ul class='list'><li>Use React.memo for component memoization</li><li>Implement code splitting with React.lazy</li><li>Optimize bundle size with tree shaking</li><li>Use proper key props in lists</li><li>Implement virtual scrolling for large lists</li></ul>",
+      "<h2 id='testing-strategy'>Testing Strategy</h2>",
+      "<p>A comprehensive testing strategy includes unit tests, integration tests, and end-to-end tests. Use tools like Jest, React Testing Library, and Cypress to ensure your application works as expected.</p>",
+      "<h3>Testing Best Practices</h3>",
+      "<p>Focus on testing behavior rather than implementation details. Write tests that give you confidence in your application's functionality.</p>",
+      "<h2 id='conclusion'>Conclusion</h2>",
+      "<p>Building scalable React applications requires careful planning and adherence to best practices. By following these patterns and continuously refactoring your code, you can create applications that stand the test of time.</p><br>",
+      "<p>Remember, scalability isn't just about handling more users—it's about creating code that can evolve with your requirements and team.</p>"
+    ]
+  },
+  {
+    "blogsId": "blog-04",
+    "showBlog": false,
+    "title": "Building Scalable React Applications",
+    "excerpt": "Learn how to structure and architect React applications that can grow with your team and requirements.",
+    "category": "Development",
+    "publishedAt": "2026-02-15",
+    "readTime": "8 min read",
+    "image": "/portfolio/images/blogs/imageB1.webp",
+    "featuredImage": "linear-gradient(to right,#64b7d4,#24a5ee)",
+    "likeCount": 1,
+    "author": {
+      "name": "Uttam Kumar",
+      "bio": "Full-stack developer in React and Node.js."
+    },
+    "toc": [
+      {
+        "id": "component-architecture",
+        "title": "Component Architecture"
+      },
+      {
+        "id": "state-management",
+        "title": "State Management"
+      },
+      {
+        "id": "performance-optimization",
+        "title": "Performance Optimization"
+      },
+      {
+        "id": "testing-strategy",
+        "title": "Testing Strategy"
+      },
+      {
+        "id": "conclusion",
+        "title": "Conclusion"
+      }
+    ],
+    "tags": [
+      "React",
+      "JavaScript",
+      "Web Development",
+      "Architecture",
+      "Best Practices"
+    ],
+    "content": [
+      "<p>Building scalable React applications is crucial for long-term project success. In this comprehensive guide, we'll explore the essential patterns and practices that will help you create maintainable, performant applications.</p>",
+      "<h2 id='component-architecture'>Component Architecture</h2>",
+      "<p>The foundation of any scalable React application lies in its component architecture. By following the principle of separation of concerns and creating reusable components, we can build applications that are both maintainable and extensible.</p>",
+      "<h3>Container vs Presentational Components</h3>",
+      "<p>One of the most important patterns is separating your components into containers (smart components) and presentational components (dumb components). Container components handle logic and state management, while presentational components focus purely on rendering UI.</p>",
+      "<h3>Container vs Presentational Components</h3>",
+      "<div class='code-block'> <pre><code>const UserListContainer = () => { \n\tconst [users, setUsers ] = useState([]); \nconst [loading, setLoading ] = useState(true); \nuseEffect(() => { fetchUsers().then(data => { setUsers(data); \nsetLoading(false); }); }, []); return &lt;UserList users={users } loading={loading } /&gt;; }; // Presentational Component const UserList = ({ users, loading }) => { if (loading) return &lt;div&gt;Loading...&lt;/div&gt;; return ( &lt;div&gt; {users.map(user => ( &lt;UserCard key={user.id } user={user } /&gt; )) } &lt;/div&gt; ); };</code></pre> </div>",
+      "<h2 id='state-management'>State Management</h2>",
+      "<p>As your application grows, managing state becomes increasingly complex. Consider using state management libraries like Redux, Zustand, or Context API for global state management.</p>",
+      "<h3>When to Use Local vs Global State</h3>",
+      "<p>Not all state needs to be global. Use local state for component-specific data and global state for data that needs to be shared across multiple components.</p>",
+      "<blockquote class='quote'> \"The key to successful state management is knowing when to lift state up and when to keep it local.\" - React Team </blockquote>",
+      "<h2 id='performance-optimization'>Performance Optimization</h2>",
+      "<p>Performance is crucial for user experience. Here are some key optimization techniques:</p>",
+      "<ul class='list'><li>Use React.memo for component memoization</li><li>Implement code splitting with React.lazy</li><li>Optimize bundle size with tree shaking</li><li>Use proper key props in lists</li><li>Implement virtual scrolling for large lists</li></ul>",
+      "<h2 id='testing-strategy'>Testing Strategy</h2>",
+      "<p>A comprehensive testing strategy includes unit tests, integration tests, and end-to-end tests. Use tools like Jest, React Testing Library, and Cypress to ensure your application works as expected.</p>",
+      "<h3>Testing Best Practices</h3>",
+      "<p>Focus on testing behavior rather than implementation details. Write tests that give you confidence in your application's functionality.</p>",
+      "<h2 id='conclusion'>Conclusion</h2>",
+      "<p>Building scalable React applications requires careful planning and adherence to best practices. By following these patterns and continuously refactoring your code, you can create applications that stand the test of time.</p><br>",
+      "<p>Remember, scalability isn't just about handling more users—it's about creating code that can evolve with your requirements and team.</p>"
+    ]
+  }
+]

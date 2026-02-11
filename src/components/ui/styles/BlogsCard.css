@@ -1,7 +1,12 @@
 .blogs-card {
-    max-width: 250px;
-    height: 300px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 20px;
+    max-width: 270px;
+    min-height: 300px;
+    box-shadow: rgba(149, 157, 165, 0.6) 0px 0px 15px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
     transition: scale 0.3s linear;
     -webkit-transition: scale 0.3s linear;
     -moz-transition: scale 0.3s linear;
@@ -11,10 +16,17 @@
 
 .blogs-card {
     & .card-style {
+        width: auto;
+        height: 150px;
         background-color: var(--light-gray);
         background-size: cover;
-        width: 100%;
-        height: 150px;
+        margin: 0.5rem 0.5rem 0 0.5rem;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        -webkit-border-radius: 15px;
     }
 
     & .card-content {
@@ -26,18 +38,16 @@
         justify-content: space-between;
     }
 
-    /* & .category {
-        display: inline-block;
-        font-size: 0.8rem;
+    & .blog-card--title {
+        display: -webkit-box;
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 600;
         color: var(--black-color);
-        background-color: #cde3ff;
-        padding: 0.3rem 1rem;
-        border-radius: 50px;
-        -webkit-border-radius: 50px;
-        -moz-border-radius: 50px;
-        -ms-border-radius: 50px;
-        -o-border-radius: 50px;
-    } */
+    }
 
     & .blog-date {
         display: flex;
@@ -46,8 +56,8 @@
 
     & .blog-icon {
         margin-bottom: -0.2rem;
-        font-size: 1.5rem;
-        color: var(--primary-color);
+        font-size: 1.2rem;
+        color: var(--secondary-color);
     }
 
     & .date {

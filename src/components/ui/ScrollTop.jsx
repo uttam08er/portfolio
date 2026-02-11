@@ -25,12 +25,14 @@ const ScrollTop = () => {
   }, []);
 
   return isVisible ? (
-    <button
-      className={`scroll-to-top-btn ${isVisible ? 'visible' : ''}`}
-      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-    >
-      <FaArrowUp className='scroll-to-top-icon' />
-    </button>
+    <>
+      <button
+        className={`scroll-to-top-btn ${isVisible ? 'visible' : ''}`}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      >
+        <FaArrowUp className='scroll-to-top-icon' />
+      </button>
+    </>
   ) : null;
 };
 export default ScrollTop;

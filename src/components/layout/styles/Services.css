@@ -7,23 +7,14 @@
     gap: 3rem;
 }
 
+
 @media (max-width: 992px) {
-    .about-content.grid-two--cols {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .service-header {
-        text-align: center;
-    }
-}
-
-@media (max-width: 915px) {
     .service-cards.grid-three--cols{
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 590px) {    
+@media (max-width: 596px) {    
     .service-cards.grid-three--cols {
         grid-template-columns: repeat(1, 1fr);
         margin: 3rem 0;

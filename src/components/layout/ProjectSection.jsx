@@ -13,20 +13,18 @@ const ProjectSection = () => {
   };
 
   return (
-    <Element name='projects'>
-      <div className="block">
-        <div className="container">
-          <div className="header">
-            <h1>MY PROJECTS</h1>
-            <p>Feel free to visit my Projects page to explore a detailed showcase of my work, complete with live demos and source code (if applicable).</p>
-          </div>
+    <Element name='projects' className='block'>
+      <div className="container">
+        <div className="header">
+          <h1>MY PROJECTS</h1>
+          <p>Most recent works</p>
+        </div>
 
-          <section className="projects">
-            <AllProjectCard limit={4} />
-          </section>
-          <div className="more-items">
-            <Button onClick={handleMoreClick} variant="secondary">More Works</Button>
-          </div>
+        <section className="projects">
+          <AllProjectCard limit={4} />
+        </section>
+        <div className="more-items">
+          <Button onClick={handleMoreClick} variant="secondary">More Works</Button>
         </div>
       </div>
     </Element>

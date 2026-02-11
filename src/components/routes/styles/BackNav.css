@@ -1,14 +1,14 @@
 .back-nav {
     position: fixed;
     width: 100%;
-    background-color: var(--background-color);
+    background-color: var(--white-color);
     z-index: 1000;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 
     .back-nav--container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 1.2rem 2rem;
+        padding: 1.2rem 3rem;
 
         span {
             color: var(--dark-gray);

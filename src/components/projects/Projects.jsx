@@ -10,7 +10,7 @@ const Projects = () => {
             <div className="container">
                 <div className="header">
                     <h1>MY PROJECTS</h1>
-                    <p>Feel free to visit my Projects page to explore a detailed showcase of my work, complete with live demos and source code (if applicable).</p>
+                    <p>Most recent works</p>
                 </div>
 
                 <div className='all-projects'>

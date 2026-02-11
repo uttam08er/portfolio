@@ -2,12 +2,10 @@ import React from 'react';
 import { FaCalendar, FaArrowRight } from 'react-icons/fa6';
 import { NavLink } from 'react-router-dom';
 import './styles/BlogsCard.css';
-// import BlogPage from '../blogs/BlogPage';
-// import { Routes, Route } from 'react-router-dom';
 
 
 const BlogsCard = (props) => {
-    const { blogsId, date, image, title, description } = props.element;
+    const { blogsId, publishedAt, image, title } = props.element;
     return (
         <div className="blogs-card">
             <NavLink to={`/portfolio/blogs/${blogsId}`}>
@@ -16,11 +14,14 @@ const BlogsCard = (props) => {
                 }} />
 
                 <div className="card-content">
+                    <p className='blog-card--title'>{title}</p>
                     <div className="blog-date">
-                        <p><FaCalendar className='blog-icon' /><span className='date'>{date}</span></p>
+                        <p><FaCalendar className='blog-icon' />
+                            <span className='date'>
+                                {new Date(publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                            </span></p>
                         <p><FaArrowRight className='blog-icon' /></p>
                     </div>
-                    <h4>{title}</h4>
                 </div>
             </NavLink>
         </div>

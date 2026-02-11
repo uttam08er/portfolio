@@ -62,7 +62,7 @@ const Navbar = () => {
   return (
     <header className={`navbar ${isScroll ? 'scroll' : ''}`}>
       <div className="navbar-container">
-        <div className="logo">Portfolio.</div>
+        <div className="logo gradient-text">Uttam.</div>
 
         <button
           ref={hamburgerRef}

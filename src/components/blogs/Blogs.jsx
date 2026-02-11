@@ -10,7 +10,7 @@ const Blogs = () => {
             <div className="container">
                 <div className="header">
                     <h1>MY BLOGS</h1>
-                    <p>Welcome to my blog! Here, I share my thoughts, insights, and experiences in the tech world.</p>
+                    <p>Exploring ideas, sharing knowledge!</p>
                 </div>
 
                 <div className="all-blogs">

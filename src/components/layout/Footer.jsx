@@ -42,7 +42,7 @@ Best regards,
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="logo">Portfolio.</div>
+        <div className="logo gradient-text">Uttam.</div>
         <div className='footer-content'>
           <p>💡 Have Any Project in Mind?</p>
           <p>Let’s work together to create something amazing!</p>

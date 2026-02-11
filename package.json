@@ -4,6 +4,7 @@
   "homepage": "https://uttam08er.github.io/portfolio/",
   "version": "0.0.0",
   "type": "module",
+  "private": true,
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",

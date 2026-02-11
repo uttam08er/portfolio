@@ -1,20 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa6';
 import './styles/ProjectCard.css';
 
 const ProjectCard = (props) => {
-    const { projectId, image, title, description } = props.element;
+    const { projectId, image, title } = props.element;
 
     return (
         <div className="project-card" >
             <NavLink to={`/portfolio/projects/${projectId}`}>
-            <div className="card-style" style={{
-                backgroundImage: `url(${image})`
-            }} />
+                <div className="card-style" style={{
+                    backgroundImage: `url(${image})`
+                }} />
+                {/* <div className="card-content">
+                    <p className="project-title">{title}</p>
+                    <FaArrowRight className="arrow-icon" />
+                </div> */}
             </NavLink>
-
-            {/* <h3>{title}</h3> */}
-            {/* <p>{description}</p> */}
         </div>
     );
 };

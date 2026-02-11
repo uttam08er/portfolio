@@ -1,6 +1,6 @@
   /* src/styles/ContactForm.css */
   .contact-form-section {
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
 
@@ -10,7 +10,6 @@
   }
 
   .contact-info {
-    /* background-color: var(--light-gray); */
     color: var(--text-color);
     padding: 3rem;
     display: flex;
@@ -40,7 +39,7 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: var(--background-color);
+    background-color: var(--white-color);
     color: var(--dark-gray);
     border-radius: 50%;
     transition: all 0.3s ease;
@@ -67,74 +66,6 @@
   .contact-form-wrapper h2 {
     margin-bottom: 2rem;
     color: var(--text-color);
-  }
-
-  .toast {
-    position: fixed;
-    top: 8%;
-    width: 100%;
-    max-width: 1200px;
-    padding: 1rem 4rem;
-    margin: 0 auto;
-    z-index: 999;
-  }
-
-  .toast-container {
-    position: relative;
-  }
-
-  .form-status {
-    position: absolute;
-    right: 0;
-    padding: 0.7rem 1rem;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-  }
-
-  .form-status:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    border-radius: 0 0 0 5px;
-    -webkit-border-radius: 0 0 0 5px;
-    -moz-border-radius: 0 0 0 5px;
-    -ms-border-radius: 0 0 0 5px;
-    -o-border-radius: 0 0 0 5px;
-    animation: toast 0.5s ease;
-    -webkit-animation: toast 5s linear;
-  }
-
-  @keyframes toast {
-    0% {
-      width: 100%;
-    }
-
-    100% {
-      width: 0%;
-    }
-  }
-
-  .form-status.success {
-    background-color: #d8fee7;
-    color: #00983f;
-  }
-
-  .form-status.success:after {
-    background: #00983f;
-  }
-
-  .form-status.error {
-    background-color: #fee2e2;
-    color: #ea0404;
-  }
-
-  .form-status.error:after {
-    background: #ea0404;
   }
 
   .contact-form {
@@ -191,10 +122,6 @@
       min-width: 310px;
     }
 
-    /* .contact-form-wrapper{
-      grid-template-columns: repeat(2, 1fr);
-    } */
-
     .contact-form-wrapper {
       padding: 2rem;
     }
@@ -205,11 +132,3 @@
       grid-template-columns: 1fr;
     }
   }
-
-  /* @media(max-width: 576px) {
-    .contact-form-container {
-      & .contact-info {
-        padding: 2rem 1rem;
-      }
-    }
-  } */

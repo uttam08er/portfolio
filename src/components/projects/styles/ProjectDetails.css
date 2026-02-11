@@ -5,6 +5,7 @@
 
     .grid-two--cols {
         display: grid;
+        /* padding: 0.5rem; */
         grid-template-columns: 1fr 1.5fr;
         box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 
@@ -12,7 +13,7 @@
             display: flex;
             flex: 1;
             flex-direction: row;
-            background-color: var(--background-color);
+            background-color: var(--white-color);
 
             .all-details {
                 display: flex;
@@ -27,7 +28,8 @@
 
                     .project-title {
                         font-weight: 600;
-                        color: #4168ac;
+                        /* color: #4168ac; */
+                        color: var(--secondary-color);
                         margin-bottom: 0;
                     }
 
@@ -56,7 +58,8 @@
 
                     .tech-title {
                         font-weight: 600;
-                        color: #d58bc0;
+                        /* color: #d58bc0; */
+                        color: var(--primary-color);
                         margin-bottom: 0;
                     }
 
@@ -87,6 +90,22 @@
                     align-items: center;
                     gap: 2rem;
 
+                    a {
+                        transition: all 0.3s ease-in-out;
+                        -webkit-transition: all 0.3s ease-in-out;
+                        -moz-transition: all 0.3s ease-in-out;
+                        -ms-transition: all 0.3s ease-in-out;
+                        -o-transition: all 0.3s ease-in-out;
+                    }
+
+                    a:hover {
+                        transform: scale(1.05);
+                        -webkit-transform: scale(1.05);
+                        -moz-transform: scale(1.05);
+                        -ms-transform: scale(1.05);
+                        -o-transform: scale(1.05);
+                    }
+
                     .icon {
                         margin-bottom: -0.15rem;
                         margin-right: 0.5rem;
@@ -101,11 +120,6 @@
                         -moz-border-radius: 50px;
                         -ms-border-radius: 50px;
                         -o-border-radius: 50px;
-
-                        .github-icon {
-                            scale: 1.2;
-                            /* color: #4168ac; */
-                        }
                     }
 
                     .live-link {
@@ -117,10 +131,6 @@
                         -moz-border-radius: 50px;
                         -ms-border-radius: 50px;
                         -o-border-radius: 50px;
-
-                        /* .link-icon {
-                            color: #d58bc0;
-                        } */
                     }
                 }
             }
@@ -134,11 +144,11 @@
                 font-weight: bold;
                 letter-spacing: 2px;
                 color: var(--white-color);
-                background: linear-gradient(to bottom, #a9c9ff 0%, #ffbbec 100%);
+                background-image: linear-gradient(to bottom, #a9c9ff 0%, #ffbbec 100%);
                 writing-mode: vertical-lr;
                 -webkit-writing-mode: vertical-lr;
                 -ms-writing-mode: vertical-lr;
-}
+            }
         }
     }
 }
@@ -172,14 +182,15 @@
         .grid-two--cols {
             flex-direction: row;
             grid-template-columns: 1fr;
-            /* .project-image { */
-                /* display: none; */
-                /* margin-bottom: 2rem; */
-            /* } */
+
             .details {
                 .all-details {
                     padding: 3.5rem;
                     gap: 2rem;
+                }
+
+                .side-bar {
+                    display: none;
                 }
             }
         }
@@ -192,11 +203,6 @@
             .project-image {
                 display: flex;
             }
-            .details {
-                .side-bar {
-                    display: none;
-                }
-            }
         }
     }
 }
@@ -208,9 +214,11 @@
                 .all-details {
                     padding: 2.5rem;
                     gap: 1.5rem;
+
                     .title-bar {
                         flex-direction: column;
                         gap: 2rem;
+
                         .project-title {
                             order: 1;
                         }
@@ -220,6 +228,7 @@
                         flex-direction: column;
                         align-items: start;
                         gap: 1.5rem;
+
                         .source-link {
                             order: 1;
                         }

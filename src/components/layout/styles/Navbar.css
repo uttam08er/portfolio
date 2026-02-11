@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--background-color);
+  background-color: var(--white-color);
   z-index: 1000;
 }
 
@@ -16,20 +16,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.6rem 3rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: var(--primary-color);
 }
 
 .nav-icon {
   display: none;
-  color: var(--primary-color);
+  color: #ff7dda;
   margin-bottom: -0.2rem;
   font-size: 1rem;
   margin-top: 0.3rem;
@@ -39,7 +38,7 @@
   display: flex;
   gap: 1.5rem;
   text-transform: uppercase;
-  font-weight: 500; 
+  font-weight: 500;
   color: var(--text-color);
 }
 
@@ -56,9 +55,9 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 1px;
+  height: 1.5px;
   width: 0%;
-  background: var(--primary-color);
+  background-image: var(--gradient-color);
   transition: width 0.3s linear;
   -webkit-transition: width 0.3s linear;
   -moz-transition: width 0.3s linear;
@@ -72,14 +71,20 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 1px;
+    height: 1.5px;
     width: 100%;
-    background: var(--primary-color);
+    background-image: var(--gradient-color);
+  }
+  .nav-icon{
+    color: #7cabfc;
   }
 }
 
 .nav-links a:hover {
   cursor: pointer;
+  .nav-icon{
+    color: #7cabfc;
+  }
 }
 
 .nav-links a:hover::after {
@@ -142,7 +147,6 @@
 }
 
 .hamburger.active::before {
-  /* background-color: var(--primary-color); */
   transform: rotate(45deg) translate(-5px, 15px);
   -webkit-transform: rotate(45deg) translate(-5px, 15px);
   -moz-transform: rotate(45deg) translate(-5px, 15px);
@@ -151,7 +155,6 @@
 }
 
 .hamburger.active::after {
-  /* background-color: var(--primary-color); */
   transform: rotate(-45deg) translate(-4px, -16px);
   -webkit-transform: rotate(-45deg) translate(-4px, -16px);
   -moz-transform: rotate(-45deg) translate(-4px, -16px);
@@ -176,7 +179,7 @@
     width: 200px;
     height: calc(100vh - 72px);
     flex-direction: column;
-    background-color: var(--background-color);
+    background-color: var(--white-color);
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     transition: right 0.5s ease;

@@ -6,8 +6,17 @@
     gap: 5rem;
 }
 
-.about-text p {
-    margin-bottom: 2rem;
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+
+    .about-heading {
+        font-size: 1.214rem;
+        font-weight: 600;
+        color: var(--black-color);
+    }
 }
 
 .comp-name {
@@ -15,14 +24,13 @@
     font-weight: 600;
 }
 
-.details.grid-two--cols {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+.download-cv {
+    margin-top: 1.5rem;
+}
 
-    & .about-icon {
-        margin-bottom: -0.2rem;
-        margin-right: 0.5rem;
-    }
+.btn-icon {
+    font-size: 1.1rem;
+    margin: 0 0.5rem -0.2rem 0;
 }
 
 .about-skills.grid-three--cols {
@@ -32,14 +40,15 @@
     gap: 2rem;
 }
 
+@media (max-width: 1100px) {
+    .about-content.grid-two--cols {
+        gap: 2rem;
+    }
+}
+
 @media (max-width: 992px) {
     .about-content.grid-two--cols {
         grid-template-columns: repeat(1, 1fr);
-    }
-
-        .details.grid-two--cols {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -57,15 +66,10 @@
     .about-skills.grid-three--cols {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .details.grid-two--cols {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
 }
 
 @media (max-width: 400px) {
-    .about-skills.grid-three--cols{
+    .about-skills.grid-three--cols {
         gap: 0rem;
     }
 }

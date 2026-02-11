@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AppLayout from './components/routes/AppLayout';
+import Toast from './components/ui/Toast.jsx';
 import './App.css';
 
 // Layout components
@@ -63,6 +64,7 @@ const App = () => {
   ]);
   return (
     <div className="App">
+      <Toast />
       <RouterProvider router={router} />
     </div>
   );

@@ -1,17 +1,5 @@
 /* scrollBehavior.css - Enhances scrolling behavior throughout the application */
 
-/* Optional: Add a scroll progress indicator */
-.scroll-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 3px;
-    background-color: #007bff;
-    z-index: 1000;
-    width: 0%;
-    transition: width 0.2s ease-out;
-}
-
 /* Optional: Style for "scroll to top" button that could be used alongside the ScrollToTop component */
 .scroll-to-top-btn {
     position: fixed;
@@ -20,7 +8,7 @@
     width: 40px;
     height: 40px;
     border-radius: 20%;
-    background-color: var(--primary-color);
+    background-image: var(--gradient-color);
     color: var(--white-color);
     cursor: pointer;
     opacity: 0;
