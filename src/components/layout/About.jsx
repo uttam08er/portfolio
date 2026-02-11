@@ -26,8 +26,8 @@ const About = () => {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-      toast.success('Thank you, My CV downloaded successfully!');
+      window.URL.revokeObjectURL(ur);
+      toast.success('CV downloaded successfully!');
     } catch (error) {
       toast.error('Oops! Something went wrong. Please try again.');
     }
