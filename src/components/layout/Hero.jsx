@@ -29,7 +29,7 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className="hero-image">
-                        <img src="/portfolio/images/hero-img.webp" alt=" " />
+                        <img src="/portfolio/images/hero-img.webp" alt="Hero image" />
                     </div>
                 </div>
             </div>
