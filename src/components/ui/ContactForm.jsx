@@ -1,6 +1,6 @@
 // src/components/ui/ContactForm.jsx
 import React, { useState } from 'react';
-import {FaPaperPlane, FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaRegEnvelope } from "react-icons/fa6";
+import { FaPaperPlane, FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaRegEnvelope, FaWhatsapp } from "react-icons/fa6";
 import { useForm } from '@formspree/react';
 import Button from '../ui/Button';
 import './styles/ContactForm.css';
@@ -64,13 +64,13 @@ const ContactForm = () => {
       try {
         // Here you would normally send the form data to a server
         // Using a timeout to simulate an API call
-        const result = await formspreeSbmit(e); // submit to Formspree
+        const result = await formspreeSubmit(e); // submit to Formspree
         console.log("Form submitted...");
 
         await new Promise(resolve => setTimeout(resolve, 1000));
         // Success
         toast.success("Your message has been sent. I\'ll get back to you soon!");
-        
+
         // Reset form
         setFormData({
           name: '',
@@ -78,7 +78,7 @@ const ContactForm = () => {
           subject: '',
           message: ''
         });
-        
+
       } catch (error) {
         // Error
         toast.error('There was an error sending your message. Please try again!');
@@ -87,6 +87,14 @@ const ContactForm = () => {
       setIsSubmitting(false);
     }
   };
+  function WhatsApp() {
+    const phoneNumber = "918540906167"; // Replace with your real WhatsApp number
+    const message = "Hi Uttam, \n\nI came across your portfolio and would love to discuss a potential project with you. \n\nLet’s connect!";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsAppLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    return whatsAppLink;
+  }
+
   function Gmail() {
     const email = "uttamkrp08@gmail.com"; // Replace with your email
     const subject = "Let's Collaborate on a Project";
@@ -122,21 +130,24 @@ Best regards,
           <div className="contact-social">
             <h3>Connect with me</h3>
             <div className="social-icons">
-              <a href="https://linkedin.com/in/uttam08er" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <FaLinkedin className='social-icon' />
-              </a>
-              <a href="https://github.com/uttam08er" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <FaGithub className='social-icon' />
+              <a href={WhatsApp()} target="_blank" rel="noopener noreferrer" aria-label="whatsapp">
+                <FaWhatsapp className='social-icon' />
               </a>
               <a href={Gmail()} target="_blank" rel="noopener noreferrer" aria-label="gmail">
                 <FaRegEnvelope className='social-icon' />
               </a>
-              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <a href="https://github.com/uttam08er" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <FaGithub className='social-icon' />
+              </a>
+              <a href="https://linkedin.com/in/uttam08er" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <FaLinkedin className='social-icon' />
+              </a>
+              {/* <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <FaTwitter className='social-icon' />
-              </a>
-              <a href="https://instagram.com/uttamkr_08" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              </a> */}
+              {/* <a href="https://instagram.com/uttamkr_08" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram className='social-icon' />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

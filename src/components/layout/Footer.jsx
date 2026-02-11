@@ -6,14 +6,6 @@ import './styles/Footer.css';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  function WhatsApp() {
-    const phoneNumber = "918540906167"; // Replace with your real WhatsApp number
-    const message = "Hi Uttam, \nI came across your portfolio and would love to discuss a potential project with you. Let’s connect!";
-    const encodedMessage = encodeURIComponent(message);
-    const whatsAppLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    return whatsAppLink;
-  }
-
   function Gmail() {
     const email = "uttamkrp08@gmail.com"; // Replace with your email
     const subject = "Let's Collaborate on a Project";
@@ -34,9 +26,6 @@ Best regards,
 [Your Portfolio Link]`;
     const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     return gmailLink;
-    // window.open(gmailLink, '_blank');
-    // const mailToLink = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    // return mailToLink;
   }
 
   return (
@@ -45,16 +34,10 @@ Best regards,
         <div className="logo gradient-text">Uttam.</div>
         <div className='footer-content'>
           <p>💡 Have Any Project in Mind?</p>
-          <p>Let’s work together to create something amazing!</p>
+          {/* <p>Let’s work together to create something amazing!</p> */}
           <p>Get in touch</p>
         </div>
         <div className="footer-social">
-          <a href={WhatsApp()} target="_blank" rel="noopener noreferrer" aria-label="whatsapp">
-            <FaWhatsapp className='footer-icon' />
-          </a>
-          <a href="https://instagram.com/uttamkr_08" target="_blank" rel="noopener noreferrer" aria-label="instagram">
-            <FaInstagram className='footer-icon' />
-          </a>
           <a href={Gmail()} target="_blank" rel="noopener noreferrer" aria-label="gmail">
             <FaRegEnvelope className='footer-icon' />
           </a>
@@ -64,9 +47,9 @@ Best regards,
           <a href="https://linkedin.com/in/uttam08er" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedinIn className='footer-icon' />
           </a>
-          {/* <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
             <FaXTwitter className='footer-icon' />
-          </a> */}
+          </a>
         </div>
         <p className="copyright">Copyright © {currentYear} . All rights reserved.</p>
         <div className="line"></div>

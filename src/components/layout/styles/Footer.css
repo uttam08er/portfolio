@@ -18,10 +18,12 @@
 }
 
 .footer-content {
-  color: var(--dark-gray);
-  place-items: center;
-  text-align: center;
-  line-height: 2.5rem;
+  & p{
+    color : var(--black-color);
+    place-items: center;
+    text-align: center;
+    line-height: 2.5rem;
+  }
 }
 
 .footer-social {
@@ -44,7 +46,7 @@
   background-color: var(--white-color);
   border-radius: 50%;
   font-size: 1.3rem;
-  color: var(--dark-gray);
+  color: var(--black-color);
   transition: all 0.3s ease;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -65,9 +67,8 @@
 .copyright,
 .author {
   font-size: 0.875rem;
-  color: var(--dark-gray);
+  color: var(--black-color);
   text-align: center;
-  /* margin: 0; */
 }
 
 .line {
