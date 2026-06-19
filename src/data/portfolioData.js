@@ -86,7 +86,7 @@ export const skills = {
 
 export const projects = [
   {
-    id: 'pt-4',
+    id: 'pt-5',
     title: "Smart Traffic Violation Detection System",
     description: "An AI-powered system that detects traffic violations in real-time using computer vision. Automatically identifies vehicles, reads license plates via OCR, and logs violations to a database.",
     longDescription: "Built an intelligent traffic management system that uses YOLOv8 for real-time object detection and OpenCV for video processing. The system identifies traffic violations, extracts license plate data using OCR, and provides a React-based dashboard for monitoring.",
@@ -108,6 +108,29 @@ export const projects = [
     icon: '🚦'
   },
 
+  {
+    id: 'pt-4',
+    title: "Shaurya eServices - Cyber-cafe management system",
+    description: "Engineered a scalable cyber cafe management platform that automates customer service requests, booking management, and administrative operations.",
+    longDescription: "A web-based management system designed to digitize cyber cafe operations. The platform enables customers to browse available services, submit service requests, and track booking status, while administrators can manage users, services, pricing, and operational records through a centralized dashboard. The system improves efficiency, reduces manual work, and provides a user-friendly experience for both customers and staff.",
+    image: "",
+    tags: ["React", "Tailwind CSS", "Python", "Flask", "PostgreSQL", "REST APIs", "JWT Authentication"],
+    github: "https://github.com/uttam08er/cyber-cafe",
+    live: "#",
+    featured: true,
+    Download: false,
+    category: ["React", "Python", "Full Stack", "web app"],
+    features: [
+      "JWT-based Authentication",
+      "User Registration & Login",
+      "Dashboard for managing services and requests",
+      "Service request tracking",
+      "Database Integration",
+      "Responsive design for all devices"
+    ],
+    color: "#0EA5E9",
+    icon: '🖥️'
+  },
   // {
   //   id: 'pt-3',
   //   title: "Evently – Event Booking Platform",
