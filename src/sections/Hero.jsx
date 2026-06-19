@@ -219,7 +219,7 @@ Best regards,
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                style={{ fontSize: '1.2rem', color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)', marginBottom: '1.5rem', fontWeight: 400 }}
+                style={{ fontSize: '1.1rem', color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)', marginBottom: '1.5rem', fontWeight: 400 }}
               >
                 Welcome to my portfolio!
               </motion.p>
@@ -251,7 +251,7 @@ Best regards,
                   fontWeight: 400,
                   fontFamily: 'Poppins',
                   marginBottom: '1.5rem',
-                  color: isDark ? 'var(--text-dark-200)' : 'var(--text-light-200)',
+                  color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)',
                   minHeight: '2.5rem',
                 }}
               >
@@ -264,7 +264,8 @@ Best regards,
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 style={{
-                  fontSize: '1.2rem',
+                  fontSize: '1.1rem',
+                  fontWeight: 400,
                   lineHeight: 1.8,
                   color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)',
                   marginBottom: '2.5rem',
