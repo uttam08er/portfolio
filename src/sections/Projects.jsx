@@ -121,6 +121,8 @@ function ProjectModal({ project, onClose, isDark }) {
           </motion.a>
           <motion.a
             href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             style={{
               display: 'flex',

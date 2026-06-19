@@ -31,7 +31,7 @@ function ParticleCanvas() {
         this.size = Math.random() * 2 + 0.5;
         this.speedX = (Math.random() - 0.5) * 0.4;
         this.speedY = (Math.random() - 0.5) * 0.4;
-        this.opacity = Math.random() * 0.5 + 0.1;
+        this.opacity = Math.random() * 0.8 + 0.1;
         this.color = ['#f5bc04cd', '#ef1313c6', '#0EA5E9'][Math.floor(Math.random() * 3)];
       }
       update() {
@@ -167,10 +167,6 @@ Best regards,
     // return gmailLink;
   }
 
-  // const scrollTo = (id) => {
-  //   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  // };
-
   return (
     <Element name="home" >
       <section
@@ -195,7 +191,7 @@ Best regards,
           left: '10%',
           width: '400px',
           height: '400px',
-          background: 'radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(99, 182, 241, 0.15) 0%, transparent 70%)',
           borderRadius: '50%',
           filter: 'blur(40px)',
           pointerEvents: 'none',

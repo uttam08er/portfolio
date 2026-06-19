@@ -26,7 +26,8 @@ import {
   TabletSmartphone,
   Frame,
   Unplug,
-  Layers
+  Layers,
+  Download
 } from "lucide-react";
 
 export const personalInfo = {
@@ -85,7 +86,7 @@ export const skills = {
 
 export const projects = [
   {
-    id: 1,
+    id: 'pt-4',
     title: "Smart Traffic Violation Detection System",
     description: "An AI-powered system that detects traffic violations in real-time using computer vision. Automatically identifies vehicles, reads license plates via OCR, and logs violations to a database.",
     longDescription: "Built an intelligent traffic management system that uses YOLOv8 for real-time object detection and OpenCV for video processing. The system identifies traffic violations, extracts license plate data using OCR, and provides a React-based dashboard for monitoring.",
@@ -94,6 +95,7 @@ export const projects = [
     github: "https://github.com/uttamkumar/traffic-detection",
     live: "#",
     featured: true,
+    Download: false,
     category: ["React", "Python", "AI/ML"],
     features: [
       "Real-time vehicle detection using YOLOv8",
@@ -106,71 +108,142 @@ export const projects = [
     icon: '🚦'
   },
 
-  {
-    id: 2,
-    title: "Evently – Event Booking Platform",
-    description: "A full-stack event booking platform where users can discover, create, and book events. Features user authentication, event management, and a seamless booking experience.",
-    longDescription: "Developed a complete event management solution with React frontend and Node.js/Express backend. Users can browse events by category, book tickets, and manage their reservations. Admins can create and manage events through a dedicated dashboard.",
-    image: "/project2.jpg",
-    tags: ["React", "Node.js", "Express.js", "MySQL"],
-    github: "https://github.com/uttamkumar/evently",
-    live: "#",
-    featured: true,
-    category: ["React", "Node.js", "Full Stack"],
-    features: [
-      "JWT-based user authentication",
-      "Event browsing with category filters",
-      "Real-time seat availability",
-      "Booking management dashboard",
-      "Responsive design for all devices"
-    ],
-    color: "#f65ca9",
-    icon: '🎪'
-  },
+  // {
+  //   id: 'pt-3',
+  //   title: "Evently – Event Booking Platform",
+  //   description: "A full-stack event booking platform where users can discover, create, and book events. Features user authentication, event management, and a seamless booking experience.",
+  //   longDescription: "Developed a complete event management solution with React frontend and Node.js/Express backend. Users can browse events by category, book tickets, and manage their reservations. Admins can create and manage events through a dedicated dashboard.",
+  //   image: "/project2.jpg",
+  //   tags: ["React", "Node.js", "Express.js", "MySQL"],
+  //   github: "https://github.com/uttamkumar/evently",
+  //   live: "#",
+  //   featured: true,
+  //   Download: false,
+  //   category: ["React", "Node.js", "Full Stack"],
+  //   features: [
+  //     "JWT-based user authentication",
+  //     "Event browsing with category filters",
+  //     "Real-time seat availability",
+  //     "Booking management dashboard",
+  //     "Responsive design for all devices"
+  //   ],
+  //   color: "#f65ca9",
+  //   icon: '🎪'
+  // },
 
   {
-    id: 3,
-    title: "E-Commerce Platform",
-    description: "A feature-rich e-commerce platform with complete shopping experience including product search, cart management, Stripe payments, and an admin dashboard for store management.",
-    longDescription: "Built a production-ready e-commerce solution with advanced features like JWT authentication, product search with filters, shopping cart with local persistence, Stripe payment integration, and a comprehensive admin dashboard for inventory and order management.",
-    image: "/project3.jpg",
-    tags: ["React", "Node.js", "Redux", "Stripe", "JWT", "MySQL"],
-    github: "https://github.com/uttamkumar/ecommerce",
-    live: "#",
+    id: 'pt-3',
+    title: "Factify – AI news headlines analyser (Real or Fake)",
+    description: "An AI-powered news analysis platform that helps users determine the credibility of news articles. Uses machine learning to classify news as real or fake and provides detailed analysis.",
+    longDescription: "An AI-powered news analysis platform that helps users determine the credibility of news articles. Uses machine learning to classify news as real or fake and provides detailed analysis.",
+    image: "",
+    tags: ["React", "Python", "Flask", "Pandas"],
+    github: "https://github.com/uttam08er/factify",
+    live: "https://factify-ten.vercel.app/",
     featured: true,
-    category: ["React", "Full Stack", "Node.js"],
+    Download: false,
+    category: ["React", "Python", "Flask"],
     features: [
-      "JWT Authentication & Authorization",
-      "Advanced product search & filters",
-      "Redux-powered shopping cart",
-      "Stripe payment integration",
-      "Admin dashboard for inventory",
-      "Order tracking system"
+      "News analysis with AI",
+      "Fake news detection using machine learning",
+      "News classification and scoring",
+      "Use openAI API key - for more details"
     ],
-    color: "#0EA5E9",
-    icon: '🛒'
+    color: "#f04c78",
+    icon: '🔍'
   },
 
+  // {
+  //   id: 'pt-2',
+  //   title: "E-Commerce Platform",
+  //   description: "A feature-rich e-commerce platform with complete shopping experience including product search, cart management, Stripe payments, and an admin dashboard for store management.",
+  //   longDescription: "Built a production-ready e-commerce solution with advanced features like JWT authentication, product search with filters, shopping cart with local persistence, Stripe payment integration, and a comprehensive admin dashboard for inventory and order management.",
+  //   image: "/project3.jpg",
+  //   tags: ["React", "Node.js", "Redux", "Stripe", "JWT", "MySQL"],
+  //   github: "https://github.com/uttamkumar/ecommerce",
+  //   live: "#",
+  //   featured: true,
+  //   Download: false,
+  //   category: ["React", "Full Stack", "Node.js"],
+  //   features: [
+  //     "JWT Authentication & Authorization",
+  //     "Advanced product search & filters",
+  //     "Redux-powered shopping cart",
+  //     "Stripe payment integration",
+  //     "Admin dashboard for inventory",
+  //     "Order tracking system"
+  //   ],
+  //   color: "#0EA5E9",
+  //   icon: '🛒'
+  // },
   {
-    id: 4,
-    title: "IoT AC Tube Light Brightness Control",
-    description: "An IoT solution for smart home automation that allows remote control of AC tube light brightness using NodeMCU microcontroller and mobile app.",
-    longDescription: "Designed and built an IoT system using NodeMCU ESP8266 that enables wireless control of AC tube light brightness. The system uses PWM control with TRIAC dimmer circuit and communicates via WiFi to a mobile-friendly web interface.",
-    image: "/project4.jpg",
-    tags: ["NodeMCU", "IoT", "ESP8266", "C++", "HTML", "Sensors"],
-    github: "https://github.com/uttamkumar/iot-brightness",
-    live: "#",
-    featured: false,
-    category: ["IoT", "Hardware"],
+    id: 'pt-2',
+    title: "SafeKey - Password Analyzer & Generator",
+    description: "A password analyzer desktop application that allows users to generate strong passwords, check password strength, and copy their passwords.",
+    longDescription: "A desktop application that provides comprehensive password management features. Users can generate secure passwords with customizable criteria, evaluate password strength using advanced algorithms, and securely store their passwords with encryption.",
+    image: "",
+    tags: ["Python", "Tkinter", "Matplotlib", "Pyinstaller"],
+    github: "https://github.com/uttam08er/SafeKey",
+    live: "https://github.com/uttam08er/SafeKey/releases/download/v1.0.0/SafeKey.exe",
+    featured: true,
+    Download: true,
+    category: ["Desktop App"],
     features: [
-      "Remote brightness control via WiFi",
-      "Real-time dimming with PWM",
-      "Mobile-friendly web interface",
-      "Energy usage monitoring",
-      "Schedule-based automation"
+      "Password generation with customizable criteria",
+      "Advanced password strength evaluation",
+      "Secure password storage with encryption",
+      "Password suggestion based on password strength",
+      "Live entropy graph"
     ],
     color: "#10B981",
-    icon: '💡'
+    icon: '🔒'
+  },
+
+  // {
+  //   id: 'pt-1',
+  //   title: "IoT AC Tube Light Brightness Control",
+  //   description: "An IoT solution for smart home automation that allows remote control of AC tube light brightness using NodeMCU microcontroller and mobile app.",
+  //   longDescription: "Designed and built an IoT system using NodeMCU ESP8266 that enables wireless control of AC tube light brightness. The system uses PWM control with TRIAC dimmer circuit and communicates via WiFi to a mobile-friendly web interface.",
+  //   image: "",
+  //   tags: ["NodeMCU", "IoT", "ESP8266", "C++", "HTML", "Sensors"],
+  //   github: "https://github.com/uttamkumar/iot-brightness",
+  //   live: "#",
+  //   featured: false,
+  //   Download: false,
+  //   category: ["IoT", "Hardware"],
+  //   features: [
+  //     "Remote brightness control via WiFi",
+  //     "Real-time dimming with PWM",
+  //     "Mobile-friendly web interface",
+  //     "Energy usage monitoring",
+  //     "Schedule-based automation"
+  //   ],
+  //   color: "#10B981",
+  //   icon: '💡'
+  // },
+  {
+    id: 'pt-1',
+    title: "WheatherAPP - Get real-time weather data",
+    description: "A weather web app that allows users to search for weather information by location and get real-time weather data.",
+    longDescription: "This responsive weather web app delivers instantaneous, hyper-localized meteorological data globally. Users input any city, postal code, or landmark into a dynamic search bar to access live environmental conditions. The platform aggregates data from trusted meteorological agencies to provide real-time updates on temperature, humidity, wind velocity, UV index, and atmospheric pressure.",
+    image: "",
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/uttam08er/WeatherApp",
+    live: "https://uttam08er.github.io/WeatherApp/",
+    featured: false,
+    Download: false,
+    category: ["Web-app"],
+    features: [
+      "Get Current Weather Data for any Location",
+      "Real-time temperature",
+      "Humidity",
+      "Wind Velocity",
+      "UV Index",
+      "Atmospheric Pressure",
+      "Mobile-friendly web interface"
+    ],
+    color: "#5610b9",
+    icon: '🌦️'
   },
 ];
 
