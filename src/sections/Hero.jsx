@@ -212,7 +212,7 @@ Best regards,
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1.5rem', position: 'relative', zIndex: 1, width: '100%' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }} className="hero-grid">
             {/* Left Content */}
-            <div className="hero-left" style={{ justifySelf: 'flex-start', alignSelf: 'flex-start' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }} className='hero-left'>
 
               {/* Greeting */}
               <motion.p
@@ -231,7 +231,7 @@ Best regards,
                 transition={{ duration: 0.5, delay: 0.2 }}
                 style={{
                   fontSize: 'clamp(2.5rem, 5vw, 3.8rem)',
-                  fontWeight: 800,
+                  fontWeight: 700,
                   fontFamily: 'Poppins',
                   lineHeight: 1.1,
                   marginBottom: '1rem',
@@ -265,6 +265,7 @@ Best regards,
                 transition={{ duration: 0.5, delay: 0.4 }}
                 style={{
                   fontSize: '1.2rem',
+                  textAlign: 'center',
                   lineHeight: 1.8,
                   color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)',
                   marginBottom: '2.5rem',
@@ -344,7 +345,7 @@ Best regards,
               style={{ display: 'flex', justifyContent: 'center' }}
               className="hero-right"
             >
-              <div style={{ position: 'relative', width: '320px', height: '400px' }} className="hero-right-section">
+              <div style={{ position: 'relative', width: '300px', height: '380px' }} className="hero-right-section">
                 {/* Floating shapes */}
                 <motion.div
                   animate={{ rotate: 360 }}
@@ -416,8 +417,8 @@ Best regards,
         <style>{`
         @media (max-width: 768px) {
           .hero-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
-          // .hero-left { justify-self: end !important; }
-          .hero-right {grid-template-columns: 1fr !important; gap: 2rem !important; }
+          .hero-left { align-items: center !important; }
+          // .hero-right {grid-template-columns: 1fr !important; gap: 2rem !important; }
           .hero-right{display:none !important}
         }
       `}</style>

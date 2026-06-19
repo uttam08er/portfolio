@@ -26,7 +26,7 @@ function HomePage() {
 
   return (
     <>
-      {/* <ScrollProgress /> */}
+      <ScrollProgress />
       <Navbar />
       <main>
         <Hero />
