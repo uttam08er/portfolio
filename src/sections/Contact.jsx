@@ -66,7 +66,7 @@ export default function Contact() {
   ];
 
   return (
-    <Element  name="contact">
+    <Element name="contact">
     <section id="contact" ref={ref} style={{ padding: '3rem 0' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
         <motion.div
@@ -95,8 +95,8 @@ export default function Contact() {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '2.5rem', alignItems: 'start' }} className="contact-grid">
           {/* Left info */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: -40 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}
           >
             <div style={{ ...card, padding: '2rem', marginBottom: '3rem' }}>
@@ -147,8 +147,8 @@ export default function Contact() {
 
           {/* Right form */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
           >
             <div style={{ ...card, padding: '2.5rem' }}>

@@ -211,9 +211,8 @@ Best regards,
 
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1.5rem', position: 'relative', zIndex: 1, width: '100%' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }} className="hero-grid">
-
             {/* Left Content */}
-            <div>
+            <div className="hero-left" style={{ justifySelf: 'flex-start', alignSelf: 'flex-start' }}>
 
               {/* Greeting */}
               <motion.p
@@ -339,13 +338,13 @@ Best regards,
 
             {/* Right — Profile Card */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               style={{ display: 'flex', justifyContent: 'center' }}
               className="hero-right"
             >
-              <div style={{ position: 'relative', width: '340px', height: '420px' }}>
+              <div style={{ position: 'relative', width: '320px', height: '400px' }} className="hero-right-section">
                 {/* Floating shapes */}
                 <motion.div
                   animate={{ rotate: 360 }}
@@ -417,7 +416,9 @@ Best regards,
         <style>{`
         @media (max-width: 768px) {
           .hero-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
-          .hero-right { display: none !important; }
+          // .hero-left { justify-self: end !important; }
+          .hero-right {grid-template-columns: 1fr !important; gap: 2rem !important; }
+          .hero-right{display:none !important}
         }
       `}</style>
       </section>

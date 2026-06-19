@@ -77,12 +77,12 @@ export default function About() {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center', marginBottom: '5rem' }} className="about-grid">
             {/* Left */}
             <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
+              initial={{ opacity: 0, y: 40 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
               <div style={{
-                padding: '2.5rem',
+                padding: '2.5rem 0',
               }}>
                 <h3 style={{ fontSize: '1.2rem', fontWeight: 500, fontFamily: 'Poppins', color: isDark ? 'var(--bg-light)' : 'var(--bg-dark)', marginBottom: '1rem' }}>
                   Hi, I'm <span style={{ color: 'var(--primary)' }}>Uttam</span>
@@ -122,8 +122,8 @@ export default function About() {
 
             {/* Right — Stats */}
             <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
+              initial={{ opacity: 0, y: 40 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.3 }}
             >
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.5rem' }}>
@@ -217,8 +217,8 @@ export default function About() {
               {timeline.map((item, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  initial={{ opacity: 0, y: i % 2 === 0 ? -40 : 40 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.6 + i * 0.15 }}
                   style={{
                     display: 'flex',
@@ -258,9 +258,6 @@ export default function About() {
 
         <style>{`
         @media (max-width: 768px) {
-          .about-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
-        }
-        @media (max-width: 576px) {
           .about-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
         }
       `}</style>
