@@ -265,7 +265,6 @@ Best regards,
                 transition={{ duration: 0.5, delay: 0.4 }}
                 style={{
                   fontSize: '1.2rem',
-                  textAlign: 'center',
                   lineHeight: 1.8,
                   color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)',
                   marginBottom: '2.5rem',
@@ -354,7 +353,7 @@ Best regards,
                     position: 'absolute',
                     inset: '-15px',
                     borderRadius: '50%',
-                    border: '1.5px dashed rgba(99,102,241,0.3)',
+                    border: '1.5px dashed rgba(241, 99, 99, 0.3)',
                   }}
                 />
                 <motion.div
@@ -417,7 +416,7 @@ Best regards,
         <style>{`
         @media (max-width: 768px) {
           .hero-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
-          .hero-left { align-items: center !important; }
+          .hero-left { align-items: center !important; text-align: center !important }
           // .hero-right {grid-template-columns: 1fr !important; gap: 2rem !important; }
           .hero-right{display:none !important}
         }
