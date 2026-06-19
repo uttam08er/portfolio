@@ -290,7 +290,6 @@ Best regards,
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    // onClick={() => scrollTo('projects')}
                     style={{
                       background: "var(--orange)",
                       border: 'none',
@@ -378,45 +377,46 @@ Best regards,
         </div>
 
         {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          style={{
-            position: 'absolute',
-            bottom: '2rem',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '0.5rem',
-            cursor: 'pointer',
-          }}
-          onClick={() => scrollTo('about')}
-        >
+        <Link offset={scrollOfSet} to='about'>
           <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
             style={{
-              width: '24px',
-              height: '40px',
-              border: '2px solid var(--primary-light)',
-              borderRadius: '12px',
+              position: 'absolute',
+              bottom: '2rem',
+              left: '50%',
+              transform: 'translateX(-50%)',
               display: 'flex',
-              alignItems: 'flex-start',
-              justifyContent: 'center',
-              padding: '4px',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '0.5rem',
+              cursor: 'pointer',
             }}
           >
-            <div style={{
-              width: '4px',
-              height: '8px',
-              background: 'var(--primary)',
-              borderRadius: '2px',
-            }} />
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+              style={{
+                width: '24px',
+                height: '40px',
+                border: '2px solid var(--primary-light)',
+                borderRadius: '12px',
+                display: 'flex',
+                alignItems: 'flex-start',
+                justifyContent: 'center',
+                padding: '4px',
+              }}
+            >
+              <div style={{
+                width: '4px',
+                height: '8px',
+                background: 'var(--primary)',
+                borderRadius: '2px',
+              }} />
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </Link>
 
         <style>{`
         @media (max-width: 768px) {
