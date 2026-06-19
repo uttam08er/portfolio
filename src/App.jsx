@@ -32,8 +32,8 @@ function HomePage() {
         <Hero />
         <About />
         <Skills />
-        <Projects />
         <Services />
+        <Projects />
         <Blog onOpenPost={handleOpenPost} />
         <Contact />
       </main>
@@ -55,7 +55,6 @@ function BlogDetailPage() {
 
   const handleBack = () => {
     navigate('/portfolio/');
-    // Scroll to blog section after navigation
     setTimeout(() => {
       document.getElementById('blog')?.scrollIntoView({ behavior: 'smooth' });
     }, 150);
