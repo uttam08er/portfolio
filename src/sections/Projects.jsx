@@ -11,8 +11,8 @@ function ProjectModal({ project, onClose, isDark }) {
   if (!project) return null;
   return (
     <motion.div
-      initial={{ opacity: 0}}
-      animate={{ opacity: 1}}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={onClose}
       style={{
@@ -43,6 +43,7 @@ function ProjectModal({ project, onClose, isDark }) {
           overflowY: 'auto',
           position: 'relative',
         }}
+        className='project-modal'
       >
         <button
           onClick={onClose}
@@ -142,6 +143,18 @@ function ProjectModal({ project, onClose, isDark }) {
             <FiExternalLink /> Live Demo
           </motion.a>
         </div>
+        <style>{`
+        .project-modal {
+          scrollbar-width: none;      /* Firefox */
+          -ms-overflow-style: none;   /* IE & Edge */
+        }
+
+        .project-modal::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+          display: none;
+        }
+      `}</style>
       </motion.div>
     </motion.div>
   );
@@ -163,57 +176,57 @@ export default function Projects() {
 
   return (
     <Element name="projects">
-    <section id="projects" ref={ref} style={{ padding: '3rem 0' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          style={{ textAlign: 'center', marginBottom: '3.5rem' }}
-        >
-          <span style={{ fontSize: '0.85rem', fontWeight: 400, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '3px' }}>
-            My Work
-          </span>
-          <h2 style={{
-            fontSize: 'clamp(2rem, 4vw, 2.8rem)',
-            fontWeight: 800,
-            fontFamily: 'Poppins',
-            color: isDark ? 'var(--text-dark-100)' : 'var(--text-light-100)',
-            marginTop: '0.5rem',
-          }}>
-            Featured <span style={{ color: 'var(--primary)' }}>Projects</span>
-          </h2>
-          <div style={{ width: '60px', height: '4px', background: 'var(--primary)', borderRadius: '2px', margin: '1rem auto 0' }} />
-        </motion.div>
+      <section id="projects" ref={ref} style={{ padding: '3rem 0' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            style={{ textAlign: 'center', marginBottom: '3.5rem' }}
+          >
+            <span style={{ fontSize: '0.85rem', fontWeight: 400, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '3px' }}>
+              My Work
+            </span>
+            <h2 style={{
+              fontSize: 'clamp(2rem, 4vw, 2.8rem)',
+              fontWeight: 800,
+              fontFamily: 'Poppins',
+              color: isDark ? 'var(--text-dark-100)' : 'var(--text-light-100)',
+              marginTop: '0.5rem',
+            }}>
+              Featured <span style={{ color: 'var(--primary)' }}>Projects</span>
+            </h2>
+            <div style={{ width: '60px', height: '4px', background: 'var(--primary)', borderRadius: '2px', margin: '1rem auto 0' }} />
+          </motion.div>
 
-        {/* Projects Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-          <AnimatePresence>
-            {projects.map((project, i) => (
-              <motion.div
-                key={project.id}
-                layout
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-                whileHover={{ y: -8 }}
-                onClick={() => setSelectedProject(project)}
-                style={card}
-              >
+          {/* Projects Grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            <AnimatePresence>
+              {projects.map((project, i) => (
+                <motion.div
+                  key={project.id}
+                  layout
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.4, delay: i * 0.1 }}
+                  whileHover={{ y: -8 }}
+                  onClick={() => setSelectedProject(project)}
+                  style={card}
+                >
 
-                <div style={{
-                  height: '200px',
-                  background: `radial-gradient(circle, ${project.color}40, ${project.color}80)`,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '4rem',
-                  position: 'relative',
-                  overflow: 'hidden',
-                }}>
-                  {project.icon}
-                  {/* {project.featured && (
+                  <div style={{
+                    height: '200px',
+                    background: `radial-gradient(circle, ${project.color}40, ${project.color}80)`,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '4rem',
+                    position: 'relative',
+                    overflow: 'hidden',
+                  }}>
+                    {project.icon}
+                    {/* {project.featured && (
                     <div style={{
                       position: 'absolute',
                       top: '0.75rem',
@@ -226,90 +239,90 @@ export default function Projects() {
                       fontWeight: 400,
                     }}>Featured ⭐</div>
                   )} */}
-                </div>
-
-                <div style={{ padding: '1.5rem' }}>
-                  <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
-                    {project.tags.slice(0, 4).map(t => (
-                      <span key={t} style={{
-                        background: `${project.color}18`,
-                        color: project.color,
-                        borderRadius: '6px',
-                        padding: '0.3rem 0.6rem',
-                        fontSize: '0.7rem',
-                        fontWeight: 500,
-                      }}>{t}</span>
-                    ))}
-
-                    {project.tags.length > 4 && (
-                      <span style={{
-                        background: isDark ? 'rgba(255,255,255,0.05)' : 'rgba(99,102,241,0.06)',
-                        color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)',
-                        borderRadius: '6px',
-                        padding: '0.2rem 0.55rem',
-                        fontSize: '0.7rem',
-                        fontWeight: 600,
-                      }}>+{project.tags.length - 4}</span>
-                    )}
                   </div>
 
-                  <h3 style={{
-                    fontSize: '1.05rem',
-                    fontWeight: 700,
-                    fontFamily: 'Poppins',
-                    color: isDark ? 'var(--text-dark-100)' : 'var(--text-light-100)',
-                    marginBottom: '0.6rem',
-                    lineHeight: 1.4,
-                  }}>{project.title}</h3>
+                  <div style={{ padding: '1.5rem' }}>
+                    <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
+                      {project.tags.slice(0, 4).map(t => (
+                        <span key={t} style={{
+                          background: `${project.color}18`,
+                          color: project.color,
+                          borderRadius: '6px',
+                          padding: '0.3rem 0.6rem',
+                          fontSize: '0.7rem',
+                          fontWeight: 500,
+                        }}>{t}</span>
+                      ))}
 
-                  <p style={{
-                    fontSize: '0.85rem',
-                    color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)',
-                    lineHeight: 1.7,
-                    marginBottom: '1.25rem',
-                    display: '-webkit-box',
-                    WebkitLineClamp: 2,
-                    WebkitBoxOrient: 'vertical',
-                    overflow: 'hidden',
-                  }}>{project.description}</p>
+                      {project.tags.length > 4 && (
+                        <span style={{
+                          background: isDark ? 'rgba(255,255,255,0.05)' : 'rgba(99,102,241,0.06)',
+                          color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)',
+                          borderRadius: '6px',
+                          padding: '0.2rem 0.55rem',
+                          fontSize: '0.7rem',
+                          fontWeight: 600,
+                        }}>+{project.tags.length - 4}</span>
+                      )}
+                    </div>
 
-                  <div style={{ display: 'flex', gap: '0.75rem' }}>
-                    <button
-                      style={{
-                        borderRadius: '8px',
-                        padding: '0.3rem 0.75rem',
-                        cursor: 'pointer',
-                        color: project.color,
-                        fontSize: '0.78rem',
-                        fontWeight: 600,
-                      }}
-                    >Details →</button>
+                    <h3 style={{
+                      fontSize: '1.05rem',
+                      fontWeight: 700,
+                      fontFamily: 'Poppins',
+                      color: isDark ? 'var(--text-dark-100)' : 'var(--text-light-100)',
+                      marginBottom: '0.6rem',
+                      lineHeight: 1.4,
+                    }}>{project.title}</h3>
+
+                    <p style={{
+                      fontSize: '0.85rem',
+                      color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)',
+                      lineHeight: 1.7,
+                      marginBottom: '1.25rem',
+                      display: '-webkit-box',
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: 'vertical',
+                      overflow: 'hidden',
+                    }}>{project.description}</p>
+
+                    <div style={{ display: 'flex', gap: '0.75rem' }}>
+                      <button
+                        style={{
+                          borderRadius: '8px',
+                          padding: '0.3rem 0.75rem',
+                          cursor: 'pointer',
+                          color: project.color,
+                          fontSize: '0.78rem',
+                          fontWeight: 600,
+                        }}
+                      >Details →</button>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
+
+          {projects.length === 0 && (
+            <div style={{ textAlign: 'center', padding: '4rem', color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)' }}>
+              <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔍</div>
+              <p>No projects found. Try a different search or filter.</p>
+            </div>
+          )}
         </div>
 
-        {projects.length === 0 && (
-          <div style={{ textAlign: 'center', padding: '4rem', color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)' }}>
-            <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔍</div>
-            <p>No projects found. Try a different search or filter.</p>
-          </div>
-        )}
-      </div>
-
-      {/* Modal */}
-      <AnimatePresence>
-        {selectedProject && (
-          <ProjectModal
-            project={selectedProject}
-            onClose={() => setSelectedProject(null)}
-            isDark={isDark}
-          />
-        )}
-      </AnimatePresence>
-    </section>
+        {/* Modal */}
+        <AnimatePresence>
+          {selectedProject && (
+            <ProjectModal
+              project={selectedProject}
+              onClose={() => setSelectedProject(null)}
+              isDark={isDark}
+            />
+          )}
+        </AnimatePresence>
+      </section>
     </Element>
   );
 }
