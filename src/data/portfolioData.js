@@ -116,7 +116,7 @@ export const projects = [
     image: "",
     tags: ["React", "Tailwind CSS", "Python", "Flask", "PostgreSQL", "REST APIs", "JWT Authentication"],
     github: "https://github.com/uttam08er/cyber-cafe",
-    live: "https://cyber-cafe-jasu.vercel.app/",
+    live: "https://shauryaeservices.vercel.app/",
     featured: true,
     Download: false,
     category: ["React", "Python", "Full Stack", "web app"],
