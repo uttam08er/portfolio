@@ -50,7 +50,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             style={{ textAlign: 'center', marginBottom: '4rem' }}
           >
             <span style={{
