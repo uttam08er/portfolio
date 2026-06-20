@@ -93,7 +93,7 @@ export const projects = [
     image: "/project1.jpg",
     tags: ["React", "Python", "YOLOv8", "OpenCV", "OCR", "Flask", "MySQL"],
     github: "https://github.com/uttamkumar/traffic-detection",
-    live: "",
+    live: "#",
     featured: true,
     Download: false,
     category: ["React", "Python", "AI/ML"],
