@@ -24,7 +24,7 @@ function Counter({ end, suffix, inView }) {
 
 export default function About() {
   const { isDark } = useTheme();
-  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
   const handleDownloadCV = () => {
     try {
       const url = "/portfolio/files/uttam_res.pdf";
