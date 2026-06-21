@@ -92,8 +92,7 @@ export default function About() {
                 <p style={{ fontSize: '0.95rem', lineHeight: 1.9, color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)', marginBottom: '1.25rem' }}>
                   My journey began with HTML and CSS and gradually expanded into various areas of computer science, including frontend and full-stack development, backend technologies, database management, and intelligent systems. I have hands-on experience working with technologies such as React.js, JavaScript, Node.js, MySQL, Python, AI and IoT-based applications. </p>
                 <p style={{ fontSize: '0.95rem', lineHeight: 1.9, color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)' }}>
-                  My goal is to work at an innovative organization where I can contribute to meaningful products, tackle challenging problems, and continuously grow as a software developer and technology professional.
-                </p>
+I am enthusiastic about learning new technologies, solving real-world issues, tackle challenging problems and developing innovative solutions that create meaningful impact. </p>
 
                 <motion.button
                   onClick={handleDownloadCV}
