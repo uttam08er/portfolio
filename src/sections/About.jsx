@@ -88,13 +88,11 @@ export default function About() {
                   Hi, I'm <span style={{ color: 'var(--primary)' }}>Uttam</span>
                 </h3>
                 <p style={{ fontSize: '0.95rem', lineHeight: 1.9, color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)', marginBottom: '1.25rem' }}>
-                  a passionate Computer Science student with a deep love for frontend development and UI/UX design. I specialize in building modern, responsive web applications using React.js and cutting-edge technologies.
-                </p>
+                  a passionate Computer Science student with a strong interest in software development, web technologies, and problem-solving. I enjoy designing and building modern, scalable, and user-friendly applications while continuously exploring emerging technologies. </p>
                 <p style={{ fontSize: '0.95rem', lineHeight: 1.9, color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)', marginBottom: '1.25rem' }}>
-                  My journey started with HTML/CSS and quickly evolved into full-stack exploration — from React and Redux to Node.js backends and even AI-powered applications using Python, YOLOv8 and IoT systems.
-                </p>
+                  My journey began with HTML and CSS and gradually expanded into various areas of computer science, including frontend and full-stack development, backend technologies, database management, and intelligent systems. I have hands-on experience working with technologies such as React.js, JavaScript, Node.js, MySQL, Python, AI and IoT-based applications. </p>
                 <p style={{ fontSize: '0.95rem', lineHeight: 1.9, color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)' }}>
-                  My goal is to work at an innovative company where I can contribute to meaningful products while continuously growing as a developer. I've worked with Codec technologies Pvt. Ltd. , helping them build responsive websites and applications. My focus is on creating clean, efficient code that provides an excellent user experience.
+                  I have interned at Codec technologies Pvt. Ltd. , where I contributed to building responsive websites and applications, gained practical exposure to software development workflows, and learned to work effectively in a professional environment. My goal is to work at an innovative organization where I can contribute to meaningful products, tackle challenging problems, and continuously grow as a software developer and technology professional.
                 </p>
 
                 <motion.button
