@@ -92,7 +92,7 @@ export default function About() {
                 <p style={{ fontSize: '0.95rem', lineHeight: 1.9, color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)', marginBottom: '1.25rem' }}>
                   My journey began with HTML and CSS and gradually expanded into various areas of computer science, including frontend and full-stack development, backend technologies, database management, and intelligent systems. I have hands-on experience working with technologies such as React.js, JavaScript, Node.js, MySQL, Python, AI and IoT-based applications. </p>
                 <p style={{ fontSize: '0.95rem', lineHeight: 1.9, color: isDark ? 'var(--text-dark-300)' : 'var(--text-light-300)' }}>
-                  I have interned at Codec technologies Pvt. Ltd. , where I contributed to building responsive websites and applications, gained practical exposure to software development workflows, and learned to work effectively in a professional environment. My goal is to work at an innovative organization where I can contribute to meaningful products, tackle challenging problems, and continuously grow as a software developer and technology professional.
+                  My goal is to work at an innovative organization where I can contribute to meaningful products, tackle challenging problems, and continuously grow as a software developer and technology professional.
                 </p>
 
                 <motion.button
