@@ -33,7 +33,7 @@ import {
 export const personalInfo = {
   name: "Uttam Kumar",
   role: ["Web Developer", "React Developer", "UI/UX Designer"],
-  tagline: "Building modern web experiences with React and cutting-edge technologies.",
+  tagline: "Building modern web experiences with React and cutting-edge technologies. Explore my projects, learn more about me, and discover how I can help bring your ideas to life.",
   email: "uttamkrp08@gmail.com",
   github: "https://github.com/uttam08er",
   linkedin: "https://linkedin.com/in/uttam08er",

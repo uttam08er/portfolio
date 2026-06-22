@@ -24,8 +24,8 @@
     --text-light-200: #374151;
     --text-dark-200: #9CA3AF;
 
-    --text-light-300: #7d8491;
-    --text-dark-300: #abafb9;
+    --text-light-300: #666a6d;
+    --text-dark-300: #c8d2d8;
 
     --box-shadow--light:#63636333;
     --box-shadow--dark:#42474b33;
@@ -65,6 +65,7 @@
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
   }
 
   ::-webkit-scrollbar-track {

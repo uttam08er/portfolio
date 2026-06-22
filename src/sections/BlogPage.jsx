@@ -219,18 +219,19 @@ export default function BlogPage({ postId, onBack }) {
     >
 
       {/* Content area */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1.5rem 3rem', display: 'grid', gridTemplateColumns: '1fr 280px', gap: '3rem', alignItems: 'start' }} className="blog-layout">
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem 1.5rem 3rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', alignItems: 'start' }} className="blog-layout">
 
         {/* Article */}
         <motion.article
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
+          style={{gridColumn: "1 / -2"}}
         >
           {/* Back button */}
           <motion.button
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -493,10 +494,10 @@ export default function BlogPage({ postId, onBack }) {
 
         {/* Sidebar */}
         <motion.aside
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          style={{ position: 'sticky', top: '90px' }}
+          style={{ position: 'sticky', top: '90px', width: '280px' }}
           className="blog-sidebar"
         >
           <TableOfContents headings={headings} isDark={isDark} />
@@ -523,9 +524,9 @@ export default function BlogPage({ postId, onBack }) {
       </div>
 
       <style>{`
-        @media (max-width: 900px) {
-          .blog-layout { grid-template-columns: 1fr; }
-          .blog-sidebar { display: none; }
+        @media (max-width: 992px) {
+          // .blog-layout { grid-template-columns: 1fr !important; }
+          .blog-sidebar { display: none !important; }
         }
       `}</style>
     </motion.div>
