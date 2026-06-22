@@ -27,7 +27,7 @@ export default function About() {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
   const handleDownloadCV = () => {
     try {
-      const url = "/portfolio/files/uttam_BL.pdf";
+      const url = "/portfolio/files/Uttam_CV.pdf";
       const link = document.createElement('a');
       link.href = url;
       link.download = 'Uttam_CV.pdf'; // Change to .pdf for actual PDF
