@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Element } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiGithub, FiExternalLink, FiX } from 'react-icons/fi';
+import { FiGithub, FiExternalLink, FiX, FiDownload } from 'react-icons/fi';
 import { useTheme } from '../context/ThemeContext';
 import { projects } from '../data/portfolioData';
 
@@ -140,7 +140,7 @@ function ProjectModal({ project, onClose, isDark }) {
               cursor: 'pointer',
             }}
           >
-            <FiExternalLink /> Live Demo
+            {project.Download ? <><FiDownload /> Download</> : <><FiExternalLink /> Live Demo</>}
           </motion.a>
         </div>
         <style>{`

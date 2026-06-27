@@ -86,6 +86,28 @@ export const skills = {
 
 export const projects = [
   {
+    id: 'pt-6',
+    title: "Evently – Event Booking Platform",
+    description: "A full-stack event booking platform where users can discover, create, and book events. Features user authentication, event management, and a seamless booking experience.",
+    longDescription: "Developed a complete event management solution with React frontend and Node.js/Express backend. Users can browse events by category, book tickets, and manage their reservations. Admins can create and manage events through a dedicated dashboard.",
+    image: "/project2.jpg",
+    tags: ["React", "Node.js", "Express.js", "MySQL"],
+    github: "https://github.com/uttam08er/evently",
+    live: "https://evently.vercel.app/",
+    featured: true,
+    Download: false,
+    category: ["React", "Node.js", "Full Stack"],
+    features: [
+      "JWT-based user authentication",
+      "Event browsing with category filters",
+      "Real-time seat availability",
+      "Booking management dashboard",
+      "Responsive design for all devices"
+    ],
+    color: "#f65ca9",
+    icon: '🎪'
+  },
+  {
     id: 'pt-5',
     title: "Smart Traffic Violation Detection System",
     description: "An AI-powered system that detects traffic violations in real-time using computer vision. Automatically identifies vehicles, reads license plates via OCR, and logs violations to a database.",
@@ -131,28 +153,6 @@ export const projects = [
     color: "#0EA5E9",
     icon: '🖥️'
   },
-  // {
-  //   id: 'pt-3',
-  //   title: "Evently – Event Booking Platform",
-  //   description: "A full-stack event booking platform where users can discover, create, and book events. Features user authentication, event management, and a seamless booking experience.",
-  //   longDescription: "Developed a complete event management solution with React frontend and Node.js/Express backend. Users can browse events by category, book tickets, and manage their reservations. Admins can create and manage events through a dedicated dashboard.",
-  //   image: "/project2.jpg",
-  //   tags: ["React", "Node.js", "Express.js", "MySQL"],
-  //   github: "https://github.com/uttamkumar/evently",
-  //   live: "#",
-  //   featured: true,
-  //   Download: false,
-  //   category: ["React", "Node.js", "Full Stack"],
-  //   features: [
-  //     "JWT-based user authentication",
-  //     "Event browsing with category filters",
-  //     "Real-time seat availability",
-  //     "Booking management dashboard",
-  //     "Responsive design for all devices"
-  //   ],
-  //   color: "#f65ca9",
-  //   icon: '🎪'
-  // },
 
   {
     id: 'pt-3',
@@ -172,7 +172,7 @@ export const projects = [
       "News classification and scoring",
       "Use openAI API key - for more details"
     ],
-    color: "#f04c78",
+    color: "#e2194f",
     icon: '🔍'
   },
 
