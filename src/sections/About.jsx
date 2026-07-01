@@ -30,7 +30,7 @@ export default function About() {
       const url = "/portfolio/files/Uttam_CV.pdf";
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'Uttam_CV.pdf'; // Change to .pdf for actual PDF
+      link.download = 'Uttam_CV.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
