@@ -87,7 +87,7 @@ export const skills = {
 export const projects = [
   {
     id: 'pt-6',
-    title: "Evently – Event Booking Platform",
+    title: "Evanto – Event Booking Platform",
     description: "A full-stack event booking platform where users can discover, create, and book events. Features user authentication, event management, and a seamless booking experience.",
     longDescription: "Developed a complete event management solution with React frontend and Node.js/Express backend. Users can browse events by category, book tickets, and manage their reservations. Admins can create and manage events through a dedicated dashboard.",
     image: "/project2.jpg",
@@ -289,7 +289,7 @@ export const timeline = [
   {
     year: "2025",
     title: "Major Projects Built",
-    description: "Developed Smart Traffic Detection System, Evently platform, and E-Commerce solution — gaining real-world project experience.",
+    description: "Developed Smart Traffic Detection System, Evanto platform, and E-Commerce solution — gaining real-world project experience.",
   },
   {
     year: "2026",
