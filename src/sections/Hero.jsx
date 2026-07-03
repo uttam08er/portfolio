@@ -384,7 +384,7 @@ Best regards,
                   style={{
                     position: 'absolute',
                     width: '380px',
-                    height: '380px',
+                    aspectRatio: 1,
                     borderRadius: '50%'
                   }}>
                   <img src="/portfolio/hero-image.jpg" alt="hero-image"
@@ -449,6 +449,13 @@ Best regards,
           .hero-left { align-items: center !important; text-align: center !important; order:2 !important }
           .hero-right{order:1 !important;}
         }
+          @media (max-width: 576px) {
+            .hero-img{
+              width: 300px !important;
+              }
+            img{
+              height: 300px !important;
+              }
       `}</style>
       </section>
     </Element >
