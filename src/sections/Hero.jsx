@@ -376,14 +376,18 @@ Best regards,
                   }}
                 />
 
-                <div className='hero-img'
+                <motion.div
+                  className='hero-img'
+                  initial={{ opacity: 0, y: -150 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
                   style={{
                     position: 'absolute',
                     width: '380px',
                     height: '380px',
                     borderRadius: '50%'
                   }}>
-                  <img src="public/hero-image.jpg" alt="hero-image"
+                  <img src="./public/hero-image.jpg" alt="hero-image"
                     style={{
                       height: '380px',
                       borderRadius: '50%',
@@ -391,7 +395,7 @@ Best regards,
                       outline: `${8}px solid ${isDark ? '#01223062' : '#f1f4f65e'}`,
                       outlineOffset: '-8px'
                     }} />
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           </div>
