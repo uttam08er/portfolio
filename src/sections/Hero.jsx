@@ -387,7 +387,7 @@ Best regards,
                     height: '380px',
                     borderRadius: '50%'
                   }}>
-                  <img src="/hero-image.jpg" alt="hero-image"
+                  <img src="/portfolio/hero-image.jpg" alt="hero-image"
                     style={{
                       height: '380px',
                       borderRadius: '50%',
