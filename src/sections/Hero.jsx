@@ -345,7 +345,15 @@ Best regards,
               style={{ display: 'flex', justifyContent: 'center' }}
               className="hero-right"
             >
-              <div style={{ position: 'relative', width: '300px', height: '380px' }} className="hero-right-section">
+              <div style={{
+                position: 'relative',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '300px',
+                height: '380px'
+              }}
+                className="hero-right-section">
                 {/* Floating shapes */}
                 <motion.div
                   animate={{ rotate: 360 }}
@@ -367,6 +375,23 @@ Best regards,
                     border: '1px dashed rgba(14,165,233,0.2)',
                   }}
                 />
+
+                <div className='hero-img'
+                  style={{
+                    position: 'absolute',
+                    width: '380px',
+                    height: '380px',
+                    borderRadius: '50%'
+                  }}>
+                  <img src="public/hero-image.jpg" alt="hero-image"
+                    style={{
+                      height: '380px',
+                      borderRadius: '50%',
+                      objectFit: 'cover',
+                      outline: `${8}px solid ${isDark ? '#01223062' : '#f1f4f65e'}`,
+                      outlineOffset: '-8px'
+                    }} />
+                </div>
               </div>
             </motion.div>
           </div>
@@ -417,9 +442,8 @@ Best regards,
         <style>{`
         @media (max-width: 768px) {
           .hero-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
-          .hero-left { align-items: center !important; text-align: center !important }
-          // .hero-right {grid-template-columns: 1fr !important; gap: 2rem !important; }
-          .hero-right{display:none !important}
+          .hero-left { align-items: center !important; text-align: center !important; order:2 !important }
+          .hero-right{order:1 !important;}
         }
       `}</style>
       </section>
