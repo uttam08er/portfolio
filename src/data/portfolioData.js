@@ -36,7 +36,7 @@ export const personalInfo = {
   tagline: "Building modern web experiences with React and cutting-edge technologies. Explore my projects, learn more about me, and discover how I can help bring your ideas to life.",
   email: "uttamkrp08@gmail.com",
   github: "https://github.com/uttam08er",
-  linkedin: "https://linkedin.com/in/uttam08er",
+  linkedin: "https://linkedin.com/in/uttamkr-dev",
   twitter: "",
   location: "India",
   available: true,
